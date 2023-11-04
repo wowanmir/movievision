@@ -8,7 +8,7 @@ function App() {
       <h1 className="text-3xl font-bold mb-5">Кинофильмы</h1>
       {loading && <p className="text-center">Loading...</p>}
       {error && <p className="text-center text-red-500">{error}</p>}
-      {films.map((film) => (<Film film={film.films[0]} key={film.films[0].filmId} />))}
+      {films.items?.map((film) => (<Film film={film} key={film.kinopoiskId} />))}
     </div>
   );
 }
