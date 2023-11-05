@@ -1,14 +1,24 @@
-import { Film } from "./components/Film";
-import { useFilms } from "./hooks/films";
+import { Route, Routes } from "react-router-dom";
+// import { Content } from "./components/Content";
+import { Sidebar } from "./components/Sidebar";
+// import { NotFound } from "./components/NotFound";
+import { Animations } from "./pages/Animations";
+import { Movies } from "./pages/Movies";
+import { Series } from "./pages/Series";
+import AppLayout from "./pages/AppLayout";
 function App() {
-  const { films, loading, error } = useFilms();
-
   return (
-    <div className="container mx-auto max-w-2xl pt-5">
-      <h1 className="text-3xl font-bold mb-5">Кинофильмы</h1>
-      {loading && <p className="text-center">Loading...</p>}
-      {error && <p className="text-center text-red-500">{error}</p>}
-      {films.items?.map((film) => (<Film film={film} key={film.kinopoiskId} />))}
+    <div className="App">
+    <Routes>
+      <Route path="/" element={<AppLayout />}>
+        <Route path="/Movies" element={<Movies />} />
+        <Route path="/Series" element={<Series />} />
+        <Route path="/Animations" element={<Animations />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Route>
+    </Routes>
+      <Sidebar />
+      {/* <Content /> */}
     </div>
   );
 }
