@@ -3,7 +3,7 @@ import { Serial } from "../components/Serial";
 export function Series() {
   return (
     <div>
-      <p>Serials</p>
+      <p style={{color:"yellow"}}>Serials</p>
       <Serial />
       <Serial />
       <Serial />

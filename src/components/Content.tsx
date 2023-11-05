@@ -1,13 +1,9 @@
-import { HitMovies } from "./HitMovies";
-import { NewMovies } from "./NewMovies";
-import { RecommendedMovies } from "./RecommendedMovies";
 
-export const Content = () => {
+
+export const Content = ({children}:{children:JSX.Element}) => {
     return (
-        <div>
-            <HitMovies />
-            <NewMovies />
-            <RecommendedMovies />
+        <div style={{backgroundColor:"red"}}>
+            {children}
         </div>
     );
 }
