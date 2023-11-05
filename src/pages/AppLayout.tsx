@@ -1,27 +1,20 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const AppLayout = () => {
-  const activeClass = ({ isActive }) => (isActive ? "current" : "");
   return (
     <>
       <div className="navigation">
-      <NavLink to="/" className={activeClass}>
-          На главную
-        </NavLink>
-        <NavLink to="/movies" className={activeClass}>
+        <NavLink to="/movies">
           Фильмы
         </NavLink>
-        <NavLink to="/series" className={activeClass}>
+        <NavLink to="/series">
           Сериалы
         </NavLink>
-        <NavLink to="/animations" className={activeClass}>
+        <NavLink to="/animations">
           Мультфильмы
         </NavLink>
         <input type="text" placeholder="Поиск..." />
         <button type="submit">Найти</button>
-      </div>
-      <div>
-        <Outlet />
       </div>
     </>
   );

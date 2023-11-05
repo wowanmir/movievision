@@ -1,12 +1,13 @@
-import { Movies } from "./Movies";
-
-
+import { HitMovies } from "../components/HitMovies";
+import { NewMovies } from "../components/NewMovies";
+import { RecommendedMovies } from "../components/RecommendedMovies";
 export function Home() {
   return (
     <div>
       Главная
-      <Movies />
-      
+      <HitMovies />
+      <NewMovies />
+      <RecommendedMovies />
     </div>
   );
 }

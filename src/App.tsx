@@ -14,16 +14,18 @@ function App() {
     <div className="app">
       <AppLayout />
       <div className="content">
-      <Sidebar/>
-      <Content>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
-          <Route path="/series" element={<Series />} />
-          <Route path="/animations" element={<Animations />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Content>
+        <div className="side-bar">
+          <Sidebar />
+        </div>
+        <Content>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movies" element={<Movies />} />
+            <Route path="/series" element={<Series />} />
+            <Route path="/animations" element={<Animations />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Content>
       </div>
     </div>
   );

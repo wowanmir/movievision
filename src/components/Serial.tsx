@@ -1,7 +1,7 @@
 export const Serial = () => {
     return (
         <div>
-            <p>Serial</p>
+            <p>Сериал</p>
         </div>
     )
 }

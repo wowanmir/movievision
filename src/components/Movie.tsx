@@ -1,7 +1,7 @@
 export const Movie = () => {
     return (
         <div>
-            <p>Movie</p>
+            <p>Фильм</p>
         </div>
     )
 }
