@@ -1,6 +1,6 @@
 export const Movie = () => {
     return (
-        <div>
+        <div className="movie">
             <p>Фильм</p>
         </div>
     )

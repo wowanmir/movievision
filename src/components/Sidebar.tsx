@@ -3,34 +3,29 @@ import { CategoryIcon } from "./icons/category-icon";
 import { HomeIcon } from "./icons/home-icon";
 import { LineIcon } from "./icons/line-icon";
 import { WatchListIcon } from "./icons/watch-list-icon";
+import { MenuIcon } from "./icons/menu-icon";
+import { AvatarIcon } from "./icons/avatar-icon";
+import "./Sidebar.css";
 
 export const Sidebar = () => {
   return (
-    <div>
-      <br />
+    <div className="sidebar">
       <LineIcon />
-      <br />
-      <span>   Меню</span>
-      <br />
+      <span>
+        <MenuIcon size="15" /> Меню</span>
       <span>
         <HomeIcon size="15" />
-        <NavLink to="/"> Домой</NavLink>
+        <NavLink className="home" to="/"> Домой</NavLink>
       </span>
-      <br />
       <span>
         <CategoryIcon size="15" /> Категории
       </span>
-      <br />
       <LineIcon />
-      <br />
-      <span>   Volodia</span>
-      <br />
+      <span><AvatarIcon size="15" /> Volodia</span>
       <span>
-        <WatchListIcon size="15" /> Список фильмов
+        <WatchListIcon size="17" /> Список фильмов
       </span>
-      <br />
       <LineIcon />
-      <br />
     </div>
   );
 };

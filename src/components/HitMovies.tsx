@@ -1,13 +1,15 @@
 import { Movie } from "./Movie";
-
+import "./HitMovies.css";
 export const HitMovies = () => {
   return (
     <div className="hit-movies">
       <p>Главные новинки</p>
-      <Movie />
-      <Movie />
-      <Movie />
-      <Movie />
+      <div className="hit-movie-each">
+        <Movie />
+        <Movie />
+        <Movie />
+        <Movie />
+      </div>
     </div>
   );
 };

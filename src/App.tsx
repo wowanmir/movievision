@@ -1,5 +1,4 @@
 import { Route, Routes } from "react-router-dom";
-import AppLayout from "./pages/AppLayout";
 import { Animations } from "./pages/Animations";
 import { Movies } from "./pages/Movies";
 import { Series } from "./pages/Series";
@@ -7,14 +6,15 @@ import { NotFound } from "./components/NotFound";
 import { Home } from "./pages/Home";
 import { Content } from "./components/Content";
 import { Sidebar } from "./components/Sidebar";
+import AppLayout from "./pages/AppLayout";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <AppLayout />
+            <AppLayout />
       <div className="content">
-        <div className="side-bar">
+        <div className="side-box">
           <Sidebar />
         </div>
         <Content>

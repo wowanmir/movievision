@@ -1,20 +1,24 @@
 import { NavLink } from "react-router-dom";
-
+import { SearchIcon } from "../components/icons/search-icon";
+import "./AppLayout.css";
 const AppLayout = () => {
   return (
     <>
       <div className="navigation">
-        <NavLink to="/movies">
+        <NavLink className="text-name" to="/movies">
           Фильмы
         </NavLink>
-        <NavLink to="/series">
+        <NavLink className="text-name" to="/series">
           Сериалы
         </NavLink>
-        <NavLink to="/animations">
+        <NavLink className="text-name" to="/animations">
           Мультфильмы
         </NavLink>
-        <input type="text" placeholder="Поиск..." />
-        <button type="submit">Найти</button>
+        <div className="search-panel">
+          <SearchIcon size={20} />
+          <input className="search-nav" type="text" placeholder="Поиск..." />
+          <button className="btn-nav" type="submit"></button>
+        </div>
       </div>
     </>
   );
