@@ -20,8 +20,8 @@ export const AvatarIcon = ({ size }) => {
           y2="32"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#42FF00" />
-          <stop offset="1" stop-color="#549667" stop-opacity="0" />
+          <stop stopColor="#42FF00" />
+          <stop offset="1" stopColor="#549667" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>
