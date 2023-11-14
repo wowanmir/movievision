@@ -1,17 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { IMovie } from "../data/data";
+
 import { Movie } from "./Movie";
+import { TMovie, TMovieResponseData } from "../data/data";
 
 export function NewMovies() {
-  const [movies, setMovies] = useState<IMovie>({
-    Items: [],
-  });
+  const [movies, setMovies] = useState<TMovieResponseData | undefined>(undefined);
 
-  console.log(movies);
 
   async function getMovies() {
-    const response = await axios.get<IMovie>(
+    const response = await axios.get<TMovieResponseData>(
       "https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&genres=1&order=RATING&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000&page=1",
       {
         headers: {
@@ -31,7 +29,7 @@ export function NewMovies() {
     <div className="hit-movies">
       <p>Новые фильмы</p>
 
-      {movies.items.map((movie: IMovie) => (
+      {movies && movies?.items.map((movie: TMovie) => (
         <Movie movie={movie} key={movie.kinopoiskId} />
       ))}
     </div>

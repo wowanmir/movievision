@@ -6,10 +6,7 @@ export const RecommendedMovies = () => {
     <div className="hit-movie">
       <p>Рекомендуемые фильмы</p> <br />
       <div className="hit-movie-each">
-        <Movie />
-        <Movie />
-        <Movie />
-        <Movie />
+       
       </div>
     </div>
   );
