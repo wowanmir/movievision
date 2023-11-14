@@ -1,10 +1,10 @@
 export interface IMovie {
   total: number;
   totalPages: number;
-  items: [
+  items: [ string | number,
     {
       kinopoiskId: number;
-      imdbId: string | number;
+      imdbId: string;
       nameRu: string;
       nameEn: string;
       nameOriginal: string;

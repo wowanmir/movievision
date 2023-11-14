@@ -5,12 +5,15 @@ interface MovieProps {
 }
 export function Movie({ movie }: MovieProps) {
   return (
-    <>
+    <div>
       <div className="movie">
-        <img src={movie.items[0].posterUrlPreview} alt="" />
+        <img
+          src={movie.items[0].posterUrlPreview}
+          alt={movie.items[0].nameRu}
+        />
       </div>
       <p>{movie.items[0].nameRu}</p>
-      <div>{movie.items[0].ratingKinopoisk}</div>
-    </>
+      <div>Рейтинг Кинопоиска: {movie.items[0].ratingKinopoisk}</div>
+    </div>
   );
 }
