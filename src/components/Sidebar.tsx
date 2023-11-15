@@ -5,7 +5,7 @@ import { LineIcon } from "./icons/line-icon";
 import { WatchListIcon } from "./icons/watch-list-icon";
 import { MenuIcon } from "./icons/menu-icon";
 import { AvatarIcon } from "./icons/avatar-icon";
-import "./Sidebar.css";
+import "./Content";
 
 export const Sidebar = () => {
   return (

@@ -6,7 +6,7 @@ interface IContent {
 
 export const Content:FC<IContent> = ({children}) => {
     return (
-        <div className="content-1">
+        <div className="main-content">
             {children}
         </div>
     );

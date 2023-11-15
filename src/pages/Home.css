@@ -3,17 +3,5 @@
   flex-direction: column;
   height: 100%;
   gap: 15px;
-}
-.hit {
-  font-size: 15px;
-  border-radius: 10px 0 0 10px;
-}
-
-.new {
-  font-size: 15px;
-  border-radius: 10px 0 0 10px;
-}
-.rec {
-  font-size: 15px;
-  border-radius: 10px 0 0 10px;
+  text-decoration: none;
 }

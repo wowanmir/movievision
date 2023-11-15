@@ -1,16 +1,13 @@
 .navigation {
-  display: inline;
+  display: flex;
   flex-direction: row;
   height: 100%;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-end;
   flex-wrap: nowrap;
-  position: sticky;
-  top: 0;
   font: 30px Arial, Helvetica, sans-serif;
-  letter-spacing: 3px;
-  background: rgb(100, 100, 100) 0.7;
-  backdrop-filter: blur(30px);
-  padding-left: 80px;
+  letter-spacing: 5px;
+  font-weight: bold;
 }
 
 .text-name {
