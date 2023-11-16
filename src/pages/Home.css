@@ -1,7 +1,0 @@
-.home {
-  display: inline-flex;
-  flex-direction: column;
-  height: 100%;
-  gap: 15px;
-  text-decoration: none;
-}

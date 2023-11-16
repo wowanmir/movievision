@@ -12,16 +12,18 @@ export const Sidebar = () => {
     <div className="sidebar">
       <LineIcon />
       <span>
-        <MenuIcon size="15" /> Меню</span>
-      <span>
-        <HomeIcon size="15" />
-        <NavLink className="home" to="/"> Домой</NavLink>
+        <MenuIcon size="15" /> Меню
       </span>
+      <div>
+        <HomeIcon size="15" /> <NavLink className="home-link" to="/">Домой</NavLink>
+      </div>
       <span>
         <CategoryIcon size="15" /> Категории
       </span>
       <LineIcon />
-      <span><AvatarIcon size="15" /> Volodia</span>
+      <span>
+        <AvatarIcon size="15" /> Volodia
+      </span>
       <span>
         <WatchListIcon size="17" /> Список фильмов
       </span>

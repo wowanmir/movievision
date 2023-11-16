@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { SearchIcon } from "../components/icons/search-icon";
 import "./AppLayout.css";
+import { Icon } from "../components/icons/icon";
 const AppLayout = () => {
   return (
-    <>
+    <div className="logo-nav">
+        <div className="logo">
+          <Icon size={50} />
+        </div>
       <div className="navigation">
         <NavLink className="text-name" to="/movies">
           Фильмы
@@ -20,7 +24,7 @@ const AppLayout = () => {
           <button className="btn-nav" type="submit"></button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
