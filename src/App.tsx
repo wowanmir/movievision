@@ -5,7 +5,6 @@ import { Series } from "./pages/Series";
 import { NotFound } from "./components/NotFound";
 import { Home } from "./pages/Home";
 import { Content } from "./components/Content";
-import { Sidebar } from "./components/Sidebar";
 import AppLayout from "./pages/AppLayout";
 import { MoviePage } from "./pages/MoviePage";
 import { Footer } from "./components/Footer";
@@ -15,9 +14,6 @@ function App() {
     <div className="app">
       <AppLayout />
       <div className="content">
-        <div className="side-box">
-          <Sidebar />
-        </div>
         <Content>
           <Routes>
             <Route path="/" element={<Home />} />

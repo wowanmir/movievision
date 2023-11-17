@@ -1,33 +1,35 @@
 import { useEffect, useState } from "react";
-import { Film } from "../components/Film";
-import { API_KEY } from "../data/api";
 import { TFilm } from "../data/data";
-import axios from "axios";
+import { useParams } from "react-router-dom";
+import { getFilm } from "../data/FilmService";
+import "./MoviePage.css";
 
 export function MoviePage() {
-  const [films, setFilms] = useState<TFilm | undefined>(undefined);
-  async function getFilms() {
-    
-    const response = await axios.get<TFilm>(
-      "https://kinopoiskapiunofficial.tech/api/v2.2/films/",
-      {
-        headers: {
-          "X-API-KEY": API_KEY,
-          "Content-Type": "application/json",
-        },
-      }
-      );
-      setFilms(response.data);
+  const [film, setFilm] = useState<TFilm | undefined>(undefined);
+  const { kinopoiskId } = useParams();
+
+  useEffect(() => {
+    async function fetchData() {
+      const filmData = await getFilm(kinopoiskId);
+      setFilm(filmData);
     }
-    
-    useEffect(() => {
-      getFilms();
-    }, []);
-    
-    return (
-      <div>
-      {Array.isArray(films) &&
-        films.map((film: TFilm) => <Film film={film} key={film.kinopoiskId} />)}
+
+    fetchData();
+  }, [kinopoiskId]);
+
+  return (
+    <div className="movie-body">
+          <img src={film?.posterUrl} alt={film?.nameRu} />
+      <div className="movie-container">
+        <div className="movie-poster">
+        </div>
+        <div className="movie-details">
+          <p>{film?.nameRu}</p>
+          Рейтинг: {film?.ratingKinopoisk}
+        </div>
+        <span className="movie-description">
+          {film?.description}</span>
+      </div>
     </div>
   );
 }

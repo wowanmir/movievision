@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Movie } from "./Movie";
 import { TMovie, TMovieResponseData } from "../data/data";
-import { API_KEY, API_SLIDER } from "../data/api";
+import { API_KEY, API_SLIDER_1 } from "../data/api";
 
 export const HitMovies = () => {
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
@@ -11,7 +11,7 @@ export const HitMovies = () => {
 
   async function getMovies() {
     const response = await axios.get<TMovieResponseData>(
-      API_SLIDER,
+      API_SLIDER_1,
       {
         headers: {
           "X-API-KEY": API_KEY,

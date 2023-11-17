@@ -6,7 +6,9 @@ const AppLayout = () => {
   return (
     <div className="logo-nav">
         <div className="logo">
-          <Icon size={50} />
+          <a href="/">
+          <Icon size={50} /> 
+          </a>
         </div>
       <div className="navigation">
         <NavLink className="text-name" to="/movies">

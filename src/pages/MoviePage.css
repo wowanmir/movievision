@@ -1,0 +1,39 @@
+.movie-body {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    max-width: 1800px;
+    justify-content: center;
+    overflow: hidden;
+    border: 5px solid black;
+    border-radius: 80px;
+    box-shadow: 0 15px 15px rgb(0, 0, 0, 0.2);
+    align-items: center;
+}
+.movie-container {
+  position: absolute;
+  height: 100%;
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.movie-body img {
+  width: 100%;
+  height: 135%;
+  opacity: 0.2;
+
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
+.movie-description {
+  font-size: 16px;
+}

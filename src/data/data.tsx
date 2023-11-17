@@ -21,6 +21,7 @@ export type TMovie = {
   posterUrl: string;
   posterUrlPreview: string;
 };
+
 export type TMovieResponseData = {
   total: number;
   totalPages: number;
@@ -87,4 +88,16 @@ export type TFilm  = {
   hasImax: boolean;
   has3D: boolean;
   lastSync: string;
+};
+
+export type TMovieTrailer = {
+      url: string,
+      name: string,
+      site: string,
+};
+
+export type TMovieTrailerResponseData = {
+  total: number;
+  totalPages: number;
+  items: TMovieTrailer[];
 };
