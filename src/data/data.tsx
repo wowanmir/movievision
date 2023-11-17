@@ -27,7 +27,7 @@ export type TMovieResponseData = {
   items: TMovie[];
 };
 
-export type TFilms = {
+export type TFilm  = {
   kinopoiskId: number;
   kinopoiskHDId: string | number;
   imdbId: string;

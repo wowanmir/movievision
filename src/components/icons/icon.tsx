@@ -5,7 +5,6 @@ export const Icon = ({ size }) => {
       height={size}
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
-      class="bi bi-collection-play"
       viewBox="0 0 16 16"
     >
       {" "}

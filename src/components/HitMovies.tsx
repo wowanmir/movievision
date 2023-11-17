@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Movie } from "./Movie";
 import { TMovie, TMovieResponseData } from "../data/data";
+import { API_KEY, API_SLIDER } from "../data/api";
 
 export const HitMovies = () => {
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
@@ -10,10 +11,10 @@ export const HitMovies = () => {
 
   async function getMovies() {
     const response = await axios.get<TMovieResponseData>(
-      "https://kinopoiskapiunofficial.tech/api/v2.2/films?&order=RATING&type=FILM&ratingFrom=08&ratingTo=10&yearFrom=1950&yearTo=2023",
+      API_SLIDER,
       {
         headers: {
-          "X-API-KEY": "d4fd78fe-13ed-4b1b-af4e-1b0c7e2e64b1",
+          "X-API-KEY": API_KEY,
           "Content-Type": "application/json",
         },
       }
