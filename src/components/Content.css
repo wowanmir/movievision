@@ -2,14 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  height: 1200px;
-  width: 1350px;
+  height: 1080px;
+  width: 1920px;
 }
 
 .home-page{
   display: flex;
-  gap: 55px;
-  justify-content: space-around;
+  justify-content: center;
 }
 .sidebar {
   display: flex;

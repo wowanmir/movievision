@@ -2,22 +2,38 @@
   position: relative;
   display: flex;
   height: 100vh;
-  max-width: 1700px;
+  max-width: 1800px;
   overflow: hidden;
-  padding: 30px;
+  padding: 10px;
+}
+
+.movie-poster {
+  position: absolute;
+  height: 50%;
+  width: auto;
+  top: 50px;
+  left: 50px;
+  border-radius: 10px;
+  border: 8px solid black;
 }
 
 .movie-background {
   position: absolute;
   justify-content: center;
   align-items: center;
-  
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.1;
+  filter: blur(4px);
 }
 
 .movie-container {
   position: absolute;
   height: 100%;
-  width: 400px;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -25,13 +41,48 @@
   overflow: hidden;
 }
 
-
 .movie-details {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  text-align: left;
+  width: 25%;
+  height: 200px;
+  bottom: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 2, 0.9);
+  color: white;
+  font-size: 23px;
+  backdrop-filter: blur(3px);
+  bottom: 220px;
+  left: 50px;
 }
 
 .movie-description {
-  font-size: 16px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 200px;
+  bottom: 10px;
+  padding: 2px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 2, 0.9);
+  color: white;
+  font-size: 23px;
+  backdrop-filter: blur(3px);
+  left: 50px;
+  
+}
+.movie-description-title {
+  font-weight: bold;
+  text-align: left;
+
+  padding: 10px;
+}
+.movie-description-text {
+  text-align: justify;
+
+  padding: 10px;
 }
