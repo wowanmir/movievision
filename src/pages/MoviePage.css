@@ -8,13 +8,24 @@
 }
 
 .movie-poster {
-  position: absolute;
-  height: 50%;
-  width: auto;
-  top: 50px;
-  left: 50px;
+  position: relative;
+  width: 25%;
+  height: 57%;
+  left: 45px;
   border-radius: 10px;
   border: 8px solid black;
+}
+
+.movie-trailer {
+  position: relative;
+  display: flex;
+  left: 80px;
+  width: 67%;
+  height: 79%;
+  border: 5px solid gold;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
 }
 
 .movie-background {
@@ -73,7 +84,6 @@
   font-size: 23px;
   backdrop-filter: blur(3px);
   left: 50px;
-  
 }
 .movie-description-title {
   font-weight: bold;

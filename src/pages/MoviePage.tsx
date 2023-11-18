@@ -20,6 +20,9 @@ export function MoviePage() {
   return (
     <div className="movie-body">
       <img className="movie-poster" src={film?.posterUrl} alt={film?.nameRu} />
+      <div className="movie-trailer">
+        <span className="movie-trailer-title">Здесь должен быть трейлер</span>
+      </div>
       <div className="movie-details">
         <span>{film?.nameRu}</span>
         <span>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</span>
@@ -29,10 +32,10 @@ export function MoviePage() {
         <span>Жанр: {film?.genres[0].genre}</span>
         <span>Продолжительность: {film?.filmLength} мин.</span>
       </div>
-        <div className="movie-description">
+      <div className="movie-description">
         <span className="movie-description-title">О фильме</span>
         <span className="movie-description-text">{film?.description}</span>
-        </div>
+      </div>
       <div
         className="movie-background"
         style={{
