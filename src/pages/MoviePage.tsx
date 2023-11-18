@@ -19,16 +19,27 @@ export function MoviePage() {
 
   return (
     <div className="movie-body">
-          <img src={film?.posterUrl} alt={film?.nameRu} />
-      <div className="movie-container">
-        <div className="movie-poster">
+        <img src={film?.posterUrl} alt={film?.nameRu} />
+        <div className="movie-container">
+          <div className="movie-poster"></div>
+          <div className="movie-details">
+            <p>{film?.nameRu}</p>
+            Рейтинг: {film?.ratingKinopoisk}
+          </div>
+          <span className="movie-description">{film?.description}</span>
         </div>
-        <div className="movie-details">
-          <p>{film?.nameRu}</p>
-          Рейтинг: {film?.ratingKinopoisk}
-        </div>
-        <span className="movie-description">
-          {film?.description}</span>
+      <div
+        className="movie-background"
+        style={{
+          backgroundImage: `url(${film?.posterUrl})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "100vh",
+          width: "100%",
+          opacity: "0.05",
+        }}
+      >
       </div>
     </div>
   );
