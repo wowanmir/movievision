@@ -15,9 +15,7 @@ function App() {
     <div className="app">
       <AppLayout />
       <div className="content">
-        <div className="side-box">
-          <Sidebar />
-        </div>
+        <div className="side-box"><Sidebar /></div>
         <Content>
           <Routes>
             <Route path="/" element={<Home />} />

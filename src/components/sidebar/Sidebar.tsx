@@ -18,7 +18,7 @@ export const Sidebar = () => {
       <div>
         <HomeIcon size="15" />
         <NavLink className="home-link" to="/">
-          Домой
+          {" "} Домой
         </NavLink>
       </div>
       <span>

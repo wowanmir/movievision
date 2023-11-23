@@ -30,7 +30,7 @@ export const HitMovies = () => {
       <div className="movies-slider">
         {movies &&
           movies.items
-            .slice(0, 5)
+            .slice(0, 7)
             .map((movie: TMovie) => (
               <Movie movie={movie} key={movie.kinopoiskId} />
             ))}

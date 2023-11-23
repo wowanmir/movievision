@@ -8,14 +8,15 @@
   display: flex;
   height: 100vh;
   max-height: 820px;
-  width: 100%;
-  margin: 25px;
+  width: 99%;
+  max-width: 1920px;
   padding: 5px;
   overflow: scroll;
   overflow-x: hidden;
 }
 
 .side-box {
+  position: relative;
   display: flex;
   box-sizing: border-box;
   overflow: hidden;
@@ -24,9 +25,10 @@
   -o-text-overflow: clip;
   text-overflow: clip;
   letter-spacing: 3px;
-  white-space: pre;
-  background: rgb(25, 25, 25);
+  background: linear-gradient(#090a0f 1%, #222d3a 100% );
+  opacity: 0.9;
+  border-radius: 820% / 75% 75% 50% 50%;
   text-align: left;
   text-decoration: none;
-  margin: 0 25px;
+  margin: 0 2%;
 }
