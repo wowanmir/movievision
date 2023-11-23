@@ -1,15 +1,15 @@
 import { NavLink } from "react-router-dom";
-import { SearchIcon } from "../components/icons/search-icon";
+import { SearchIcon } from "../../components/icons/search-icon";
 import "./AppLayout.css";
-import { Icon } from "../components/icons/icon";
+import { Icon } from "../../components/icons/icon";
 const AppLayout = () => {
   return (
     <div className="logo-nav">
-        <div className="logo">
-          <a href="/">
-          <Icon size={50} /> 
-          </a>
-        </div>
+      <div className="logo">
+        <a href="/">
+          <Icon size={50} />
+        </a>
+      </div>
       <div className="navigation">
         <NavLink className="text-name" to="/movies">
           Фильмы

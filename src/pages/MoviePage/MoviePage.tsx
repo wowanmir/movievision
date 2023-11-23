@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { TFilm } from "../data/data";
+import { TFilm } from "../../data/data";
 import { useParams } from "react-router-dom";
-import { getFilm } from "../data/FilmService";
+import { getFilm } from "../../data/FilmService";
 import "./MoviePage.css";
 
 export function MoviePage() {

@@ -21,11 +21,13 @@
   display: flex;
   left: 80px;
   width: 67%;
-  height: 79%;
-  border: 5px solid gold;
+  height: 76%;
+  border-radius: 5px;
   background-color: black;
   align-items: center;
   justify-content: center;
+  border: 5px solid gold;
+  filter: blur(1px);
 }
 
 .movie-background {

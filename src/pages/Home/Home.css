@@ -1,0 +1,10 @@
+.home-page {
+  display: flex;
+  justify-content: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

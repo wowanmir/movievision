@@ -8,13 +8,15 @@
   font: 30px Arial, Helvetica, sans-serif;
   letter-spacing: 5px;
   font-weight: bold;
+  padding-right: 10%;
 }
 
 .logo-nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 5px;
+  padding-left: 5%;
 }
 
 .logo {

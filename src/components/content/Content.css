@@ -1,0 +1,7 @@
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 1080px;
+  width: 1920px;
+}

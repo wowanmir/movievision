@@ -1,5 +1,6 @@
 import {type FC} from "react";
 import "./Content.css"
+
 interface IContent {
     children: JSX.Element
 }

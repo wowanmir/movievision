@@ -1,0 +1,25 @@
+.main-slider {
+    max-width: 1050px;
+    padding: 15px;
+    text-align: center;
+    border: 5px solid rgb(0, 0, 0, 0.2);
+    border-radius: 50px;
+    box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2);
+  }
+  
+  .movies-slider {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 5px;
+    width: 1020px;
+    overflow: hidden;
+  }
+  
+  .title-slider {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px 30px 1px;
+  }

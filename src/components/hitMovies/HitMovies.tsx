@@ -1,24 +1,22 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Movie } from "./Movie";
-import { TMovie, TMovieResponseData } from "../data/data";
-import { API_KEY, API_SLIDER_2 } from "../data/api";
+import { Movie } from "../movie/Movie";
+import { TMovie, TMovieResponseData } from "../../data/data";
+import { API_KEY, API_SLIDER_1 } from "../../data/api";
+import "./HitMovies.css";
 
-export function NewMovies() {
+export const HitMovies = () => {
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
     undefined
   );
 
   async function getMovies() {
-    const response = await axios.get<TMovieResponseData>(
-      API_SLIDER_2,
-      {
-        headers: {
-          "X-API-KEY": API_KEY,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await axios.get<TMovieResponseData>(API_SLIDER_1, {
+      headers: {
+        "X-API-KEY": API_KEY,
+        "Content-Type": "application/json",
+      },
+    });
     setMovies(response.data);
   }
 
@@ -28,7 +26,7 @@ export function NewMovies() {
 
   return (
     <div className="main-slider">
-        <p className="title-slider">Новые фильмы</p>
+      <p className="title-slider">Высокий рейтинг</p>
       <div className="movies-slider">
         {movies &&
           movies.items
@@ -39,4 +37,4 @@ export function NewMovies() {
       </div>
     </div>
   );
-}
+};
