@@ -22,6 +22,8 @@ export function MoviePage() {
       <img className="movie-poster" src={film?.posterUrl} alt={film?.nameRu} />
       <div className="movie-trailer">
         <span className="movie-trailer-title">Здесь должен быть трейлер</span>
+        <span className="movie-trailer-text"> {film?.name}: {film?.site}  </span>
+        <span className="movie-trailer-box" > {film?.webUrl} </span>
       </div>
       <div className="movie-details">
         <span>{film?.nameRu}</span>
