@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { SearchIcon } from "../../components/icons/search-icon";
-import "./AppLayout.css";
+import "./Header.css";
 import { Icon } from "../../components/icons/icon";
-const AppLayout = () => {
+const Header = () => {
   return (
     <div className="logo-nav">
       <div className="logo">
@@ -23,11 +23,10 @@ const AppLayout = () => {
         <div className="search-panel">
           <SearchIcon size={20} />
           <input className="search-nav" type="text" placeholder="Поиск..." />
-          <button className="btn-nav" type="submit"></button>
         </div>
       </div>
     </div>
   );
 };
 
-export default AppLayout;
+export default Header;
