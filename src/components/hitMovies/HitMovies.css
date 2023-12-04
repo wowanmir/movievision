@@ -1,19 +1,16 @@
 .main-slider {
-  position: relative;
-  max-width: 1420px;
   padding: 15px;
   margin: 0 15px;
   text-align: center;
   border: 5px solid rgb(0, 0, 0, 0.2);
   border-radius: 50px;
   box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2);
+  overflow: auto;
 }
 
 .movies-slider {
-  position: relative;
+  min-width: 1440px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   margin: 5px;
 }
 

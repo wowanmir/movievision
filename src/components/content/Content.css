@@ -1,5 +1,3 @@
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+.content {
+  width: 100%;
 }

@@ -4,12 +4,10 @@ import { RecommendedMovies } from "../../components/recommendedMovies/Recommende
 import "./Home.css";
 export function Home() {
   return (
-    <div className="home-page">
       <div className="home">
         <HitMovies />
         <NewMovies />
         <RecommendedMovies />
-      </div>
     </div>
   );
 }

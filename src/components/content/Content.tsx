@@ -1,14 +1,14 @@
-import {type FC} from "react";
-import "./Content.css"
+import { type FC } from "react";
+import "./Content.css";
 
 interface IContent {
-    children: JSX.Element
+  children: JSX.Element;
 }
 
-export const Content:FC<IContent> = ({children}) => {
-    return (
-        <div className="main-content">
-            {children}
-        </div>
-    );
-}
+export const Content: FC<IContent> = ({ children }) => {
+  return (
+    <div className="content">
+      {children}
+    </div>
+  );
+};

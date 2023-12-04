@@ -7,31 +7,42 @@ import { MenuIcon } from "../icons/menu-icon";
 import { AvatarIcon } from "../icons/avatar-icon";
 import "../content/Content";
 import "./Sidebar.css";
+import { Icon } from "../icons/icon";
 
 export const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <LineIcon />
-      <span>
-        <MenuIcon size="15" /> Меню
-      </span>
-      <div>
-        <HomeIcon size="15" />
-        <NavLink className="home-link" to="/">
-          {" "} Домой
-        </NavLink>
+    <>
+      <div className="logo">
+        <a href="/">
+          <Icon size={50} />
+        </a>
       </div>
-      <span>
-        <CategoryIcon size="15" /> Категории
-      </span>
-      <LineIcon />
-      <span>
-        <AvatarIcon size="15" /> Volodia
-      </span>
-      <span>
-        <WatchListIcon size="17" /> Список фильмов
-      </span>
-      <LineIcon />
-    </div>
+      <div className="side-box">
+        <div className="sidebar">
+          <LineIcon />
+          <span>
+            <MenuIcon size="15" /> Меню
+          </span>
+          <div>
+            <HomeIcon size="15" />
+            <NavLink className="home-link" to="/">
+              {" "}
+              Домой
+            </NavLink>
+          </div>
+          <span>
+            <CategoryIcon size="15" /> Категории
+          </span>
+          <LineIcon />
+          <span>
+            <AvatarIcon size="15" /> Volodia
+          </span>
+          <span>
+            <WatchListIcon size="17" /> Список фильмов
+          </span>
+          <LineIcon />
+        </div>
+      </div>
+    </>
   );
 };

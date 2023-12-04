@@ -1,9 +1,9 @@
 export const LineIcon = () => {
   return (
     <svg
-      width="220"
+      width="100%"
       height="1"
-      viewBox="0 0 220 1"
+      viewBox="0 0 1"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

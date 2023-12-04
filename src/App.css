@@ -1,22 +1,7 @@
 .app {
   display: flex;
-}
-
-.side-box {
-  height: 100vh;
-  width: 300px;
-  margin: 20px 15px 0 15px;
-  box-sizing: border-box;
-  font: normal 17px/1 Arial, Helvetica, sans-serif;
-  color: white;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  letter-spacing: 3px;
-  background: linear-gradient(#090a0f 1%, #222d3a 100%);
-  opacity: 0.9;
-  border-radius: 820% / 75% 75% 50% 50%;
-  text-align: left;
-  text-decoration: none;
+  min-height: 1440px;
+  overflow: hidden;
 }
 
 .container {
@@ -24,13 +9,3 @@
   flex-direction: column;
   width: 100%;
 }
-
-.header {
-  height: 90px;
-  width: 100%;
-}
-
-.content {
-  width: 100%;
-}
-

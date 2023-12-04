@@ -1,11 +1,11 @@
-import "./Footer.css"
-export function Footer() {
+import "./Footer.css";
+export const Footer = () => {
   return (
-    <>
-      <div className="footer">
-        ©Vladimir Miroshnichenko 2023. Все права защищены.
-      <div>Email: Wowanmir@gmail.com Tel: 88003хуяпитцот</div>
-      </div>
-    </>
+    <div className="footer">
+      ©Vladimir Miroshnichenko 2023 <br /> 
+      Все права защищены <br /> 
+      Email: Wowanmir@gmail.com <br />
+      PhoneTel: 88003хуяпитцот
+    </div>
   );
-}
+};

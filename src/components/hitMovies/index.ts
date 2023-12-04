@@ -1,0 +1,1 @@
+export { HitMovies } from './HitMovies';
