@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   height: 100vh;
-  max-width: 1800px;
+  width: 99%;
   overflow: hidden;
   padding: 10px;
 }

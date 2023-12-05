@@ -1,7 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  
 }
+
+
+/* *, *:before, *:after {
+  outline: solid 1px #000;
+} */
+
+
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
