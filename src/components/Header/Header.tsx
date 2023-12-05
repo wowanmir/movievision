@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { SearchIcon } from "../../components/icons/search-icon";
+import { SearchIcon } from "../icons/search-icon";
 import "./Header.css";
 export function Header () {
   return (

@@ -1,9 +1,7 @@
-import { Content } from "./components/content/Content";
-import { Footer } from "./components/footer/Footer";
-import { Sidebar } from "./components/sidebar/Sidebar";
-import { AppRoutes } from "./AppRoutes";
-import { Header } from "./pages/Header/Header";
+
 import "./App.css";
+import { AppRoutes } from "./AppRoutes";
+import { Content, Footer, Header, Sidebar } from "./components";
 function App() {
   return (
     <div className="app">
