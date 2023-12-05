@@ -18,32 +18,43 @@ export function MoviePage() {
   }, [kinopoiskId]);
 
   return (
-    <div className="movie-body">
-      <img className="movie-poster" src={film?.posterUrl} alt={film?.nameRu} />
-      <div className="movie-trailer">
-        <span className="movie-trailer-title">Здесь должен быть трейлер</span>
-        <span className="movie-trailer-text"> {film?.name}: {film?.site}  </span>
-        <span className="movie-trailer-box" > {film?.webUrl} </span>
-      </div>
-      <div className="movie-details">
-        <span>{film?.nameRu}</span>
-        <span>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</span>
-        <span>Рейтинг IMDb: {film?.ratingImdb}</span>
-        <span>Год: {film?.year}</span>
-        <span>Страна: {film?.countries[0].country}</span>
-        <span>Жанр: {film?.genres[0].genre}</span>
-        <span>Продолжительность: {film?.filmLength} мин.</span>
-      </div>
-      <div className="movie-description">
-        <span className="movie-description-title">О фильме</span>
-        <span className="movie-description-text">{film?.description}</span>
-      </div>
+    <div className="movie-page">
       <div
         className="movie-background"
         style={{
           backgroundImage: `url(${film?.posterUrl})`,
         }}
       ></div>
+      <div className="movie-body">
+        <div className="movie-poster-box">
+          <img
+            className="movie-poster"
+            src={film?.posterUrl}
+            alt={film?.nameRu}
+          />
+        </div>
+        <div className="movie-trailer">
+          <div className="movie-trailer-title">
+            Здесь должен быть трейлер {film?.nameRu}: {film?.site}
+          </div>
+          <div className="movie-trailer-box"> {film?.webUrl} </div>
+        </div>
+        <div className="movie-details-box">
+          <div className="movie-details">
+            <div>{film?.nameRu}</div>
+            <div>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</div>
+            <div>Рейтинг IMDb: {film?.ratingImdb}</div>
+            <div>Год: {film?.year}</div>
+            <div>Страна: {film?.countries[0].country}</div>
+            <div>Жанр: {film?.genres[0].genre}</div>
+            <div>Продолжительность: {film?.filmLength} мин.</div>
+          </div>
+          <div className="movie-description">
+            <div className="movie-description-title">О фильме</div>
+            <div className="movie-description-text">{film?.description}</div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

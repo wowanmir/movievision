@@ -1,100 +1,89 @@
-.movie-body {
-  position: relative;
-  display: flex;
+.movie-page {
+  width: 100%;
   height: 100vh;
-  width: 99%;
-  overflow: hidden;
-  padding: 10px;
+}
+
+.movie-background {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 84%;
+  opacity: 0.1;
+  filter: blur(4px);
+}
+
+.movie-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-between;
+  gap: 5px;
+  overflow: auto;
+}
+
+.movie-poster-box {
+  width: 30%;
+  height: 70%;
 }
 
 .movie-poster {
-  position: relative;
-  width: 25%;
-  height: 57%;
-  left: 45px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   border: 8px solid black;
 }
 
 .movie-trailer {
-  position: relative;
   display: flex;
-  left: 80px;
   width: 67%;
-  height: 76%;
+  height: 70%;
   border-radius: 5px;
-  background-color: black;
   align-items: center;
   justify-content: center;
   border: 5px solid gold;
-  filter: blur(1px);
+  filter: blur(0.5px);
+  margin: 0 15px;
 }
 
-.movie-background {
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  opacity: 0.1;
-  filter: blur(4px);
-}
-
-.movie-container {
-  position: absolute;
-  height: 100%;
-  width: 50%;
+.movie-details-box {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
 }
 
 .movie-details {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
   text-align: left;
-  width: 25%;
-  height: 200px;
-  bottom: 40px;
+  width: 44%;
+  height: 90%;
   padding: 10px;
   border-radius: 8px;
   background-color: rgba(0, 0, 2, 0.9);
   color: white;
   font-size: 23px;
-  backdrop-filter: blur(3px);
-  bottom: 220px;
-  left: 50px;
 }
 
 .movie-description {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 95%;
-  height: 200px;
-  bottom: 10px;
-  padding: 2px;
+  width: 100%;
+  height: 90%;
+  padding: 10px;
   border-radius: 8px;
   background-color: rgba(0, 0, 2, 0.9);
   color: white;
   font-size: 23px;
-  backdrop-filter: blur(3px);
-  left: 50px;
+  overflow: auto;
+  margin: 0 15px 0 0;
 }
+
 .movie-description-title {
   font-weight: bold;
   text-align: left;
-
   padding: 10px;
 }
 .movie-description-text {
   text-align: justify;
-
   padding: 10px;
 }
