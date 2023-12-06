@@ -5,12 +5,11 @@
   justify-content: center;
   margin-top: 12px;
   fill: inherit;
-  
-}
+  }
 
 .side-box {
   height: 85%;
-  width: 240px;
+  width: 265px;
   margin: 20px 15px;
   padding: 15px 0px;
   box-sizing: border-box;
