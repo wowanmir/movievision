@@ -18,7 +18,7 @@ export function MoviePage() {
   }, [kinopoiskId]);
 
   return (
-    <div className="movie-page">
+    <div>
       <div
         className="movie-background"
         style={{
@@ -26,18 +26,20 @@ export function MoviePage() {
         }}
       ></div>
       <div className="movie-body">
-        <div className="movie-poster-box">
-          <img
-            className="movie-poster"
-            src={film?.posterUrl}
-            alt={film?.nameRu}
-          />
-        </div>
-        <div className="movie-trailer">
-          <div className="movie-trailer-title">
-            Здесь должен быть трейлер {film?.nameRu}: {film?.site}
+        <div className="movie-trailer-box">
+          <div className="movie-poster-box">
+            <img
+              className="movie-poster"
+              src={film?.posterUrl}
+              alt={film?.nameRu}
+            />
           </div>
-          <div className="movie-trailer-box"> {film?.webUrl} </div>
+          <video
+            className="movie-trailer"
+            src={film?.webUrl}
+            poster={film?.posterUrl}
+            controls
+          ></video>
         </div>
         <div className="movie-details-box">
           <div className="movie-details">
