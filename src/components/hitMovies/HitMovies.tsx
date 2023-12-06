@@ -9,8 +9,10 @@ export const HitMovies = () => {
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
     undefined
   );
+  const [loading, setLoading] = useState(false);
 
   async function getMovies() {
+    setLoading(true);
     const response = await axios.get<TMovieResponseData>(API_SLIDER_1, {
       headers: {
         "X-API-KEY": API_KEY,
@@ -18,6 +20,7 @@ export const HitMovies = () => {
       },
     });
     setMovies(response.data);
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -27,6 +30,7 @@ export const HitMovies = () => {
   return (
     <div className="main-slider">
       <p className="title-slider">Высокий рейтинг</p>
+      {loading && <div className="loader">Загрузка...</div>}
       <div className="movies-slider">
         {movies &&
           movies.items
