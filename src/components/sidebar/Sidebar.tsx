@@ -62,16 +62,26 @@ export const Sidebar = () => {
           </div>
           <LineIcon />
           <div className="profile">
-            <AvatarIcon size="15" /> Volodia
-            <UserProfileIcon size="20" /> Sign In
-            <NotificationsIcon size="20" /> Notifications
-            <WatchListIcon size="17" /> Список фильмов
-            <LogOutIcon size="20" /> Log Out
+            <p>
+              <AvatarIcon size="15" /> Volodia
+            </p>
+            <p>
+              <UserProfileIcon size="20" /> Профиль
+            </p>
+            <p>
+              <NotificationsIcon size="20" /> Уведомления
+            </p>
+            <p>
+              <WatchListIcon size="17" /> Избранное
+            </p>
+            <p>
+              <LogOutIcon size="20" /> Выйти
+            </p>
           </div>
           <LineIcon />
           <div className="search-panel">
             <SearchIcon size={20} />
-            <input className="search-nav" type="text" placeholder="Поиск..." />
+            <input className="search" type="text" placeholder="Поиск..." />
           </div>
         </div>
       </div>
