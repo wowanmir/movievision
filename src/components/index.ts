@@ -16,5 +16,4 @@ export { NotFound } from "./notFound";
 export { RecommendedMovies } from "./recommendedMovies";
 export { Serial } from "./serial";
 export { Sidebar } from "./sidebar";
-export { Footer } from './footer';
-export { Header } from './Header';
+export { Footer } from "./footer";

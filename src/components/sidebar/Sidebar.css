@@ -1,11 +1,9 @@
-
 .logo {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 12px;
-  fill: inherit;
-  }
+  
+}
 
 .side-box {
   height: 85%;
@@ -30,11 +28,52 @@
   flex-direction: column;
   margin: 0 15px;
   padding: 15px 0;
-  height: 400px;
+  height: 600px;
   width: 90%;
-  gap: 25px;
+  gap: 35px;
 }
 
 .home-link {
   text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+  gap: 35px;
+}
+
+.text-name {
+  font-size: 18px;
+  padding-left: 23px;
+  text-decoration: none;
+}
+
+.search-panel {
+  display: inline-flex;
+  width: 100%;
+}
+
+.search-nav {
+  width: 100%;
+  height: 30px;
+  background: #2b303b;
+  border: none;
+  font-size: 20px;
+  color: white;
+  padding-left: 5px;
+  border-radius: 8px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: left;
+}
+
+svg {
+  margin: auto;
 }
