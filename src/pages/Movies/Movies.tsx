@@ -1,11 +1,18 @@
-import "./Movies.css";
 import { useEffect, useState } from "react";
+import Select from "react-select";
+import { API_KEY } from "../../data/api";
 import axios from "axios";
 import { Movie } from "../../components/movie/Movie";
 import { TMovie, TMovieResponseData } from "../../data/data";
-import { API_KEY } from "../../data/api";
+import { getCountries, getGenres, getRatings, getYears } from "./category";
+import "./Movies.css";
 
 export const Movies = () => {
+  const countries = getCountries();
+  const genres = getGenres();
+  const ratings = getRatings();
+  const years = getYears();
+
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
     undefined
   );
@@ -30,18 +37,21 @@ export const Movies = () => {
   return (
     <div className="movies-container">
       <div className="filter">
-        <span className="title-filter">Страна = countries</span>
-        <span className="title-filter">Жанр = genres</span>
-        <span className="title-filter">Сортировка = order</span>
-        <div className="title-filter">
-          <span>Рейтинг от = ratingFrom</span>
-          <br />
-          <span>Рейтинг до = ratingTo</span>
+        <div>
+          Страна
+          <Select className="select" options={countries} />
         </div>
-        <div className="title-filter">
-          <span>Год от = yearFrom</span>
-          <br />
-          <span>Год до = yearTo</span>
+        <div>
+          Жанр
+          <Select className="select" options={genres} />
+        </div>
+        <div>
+          Рейтинг
+          <Select className="select" options={ratings} />
+        </div>
+        <div>
+          Год
+          <Select className="select" options={years} />
         </div>
       </div>
       <div className="movies-page">

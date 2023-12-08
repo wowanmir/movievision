@@ -88,10 +88,4 @@ export const Sidebar = () => {
     </>
   );
 };
-{
-  /* <div>
-  <CategoryIcon size="15" /> Категории
-  import Select from "react-select";
-  <Select className="select" options={options}/>
-</div> */
-}
+
