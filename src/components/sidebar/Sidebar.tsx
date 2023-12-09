@@ -34,8 +34,9 @@ export const Sidebar = () => {
       <div className="side-box">
         <div className="logo">
           <a href="/">
-            <Icon size={50} />
+            <Icon size={25} />
           </a>
+          <div>Kino-Films</div>
         </div>
         <div className="sidebar">
           <LineIcon />
@@ -88,4 +89,3 @@ export const Sidebar = () => {
     </>
   );
 };
-

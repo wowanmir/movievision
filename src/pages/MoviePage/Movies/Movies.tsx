@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
 import Select from "react-select";
-import { API_KEY } from "../../data/api";
-import axios from "axios";
-import { Movie } from "../../components/movie/Movie";
-import { TMovie, TMovieResponseData } from "../../data/data";
+import { useEffect, useState } from "react";
+import { API_KEY } from "../../../data/api";
+import { Movie } from "../../Home/MoviesMain/Movie/Movie";
+import { TMovie, TMovieResponseData } from "../../../data/data";
 import { getCountries, getGenres, getRatings, getYears } from "./category";
+import axios from "axios";
 import "./Movies.css";
 
 export const Movies = () => {

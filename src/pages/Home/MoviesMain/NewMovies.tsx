@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Movie } from "../movie/Movie";
-import { TMovie, TMovieResponseData } from "../../data/data";
-import { API_KEY, API_SLIDER_2 } from "../../data/api";
+import { Movie } from "./Movie/Movie";
+import { TMovie, TMovieResponseData } from "../../../data/data";
+import { API_KEY, API_SLIDER_2 } from "../../../data/api";
 
 export function NewMovies() {
   const [movies, setMovies] = useState<TMovieResponseData | undefined>(
@@ -28,10 +28,9 @@ export function NewMovies() {
       <p className="title-slider">Новые фильмы</p>
       <div className="movies-slider">
         {movies &&
-          movies.items
-            .map((movie: TMovie) => (
-              <Movie movie={movie} key={movie.kinopoiskId} />
-            ))}
+          movies.items.map((movie: TMovie) => (
+            <Movie movie={movie} key={movie.kinopoiskId} />
+          ))}
       </div>
     </div>
   );
