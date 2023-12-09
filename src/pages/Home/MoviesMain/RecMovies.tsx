@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { Movie } from "./Movie/Movie";
 import { TMovie, TMovieResponseData } from "../../../data/data";
 import { RecMoviesService } from "../../../data/movie.service";
+import { Movie } from "./Movie/Movie";
+import "./SettingsMovie.css";
 
 export const RecMovies = () => {
-  const [movies, setMovies] = useState<TMovieResponseData | undefined>(
-    undefined
-  );
+  const [movies, setMovies] = useState<TMovieResponseData>();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -24,8 +23,10 @@ export const RecMovies = () => {
       <p className="title-slider">Рекомендуемые фильмы</p>
       {loading && <div className="loader">Загрузка...</div>}
       <div className="movies-slider">
-        {movies?.items.length > 3 &&
-          movies.items.map((movie: TMovie) => (
+        {movies &&
+          movies.items &&
+          movies?.items.length > 3 &&
+          movies?.items.map((movie: TMovie) => (
             <Movie movie={movie} key={movie.kinopoiskId} />
           ))}
       </div>

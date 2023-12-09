@@ -1,34 +1,32 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import { Movie } from "./Movie/Movie";
 import { TMovie, TMovieResponseData } from "../../../data/data";
-import { API_KEY, API_SLIDER_2 } from "../../../data/api";
+import { NewMoviesService } from "../../../data/movie.service";
+import { Movie } from "./Movie/Movie";
+import "./SettingsMovie.css";
 
 export function NewMovies() {
-  const [movies, setMovies] = useState<TMovieResponseData | undefined>(
-    undefined
-  );
-
-  async function getMovies() {
-    const response = await axios.get<TMovieResponseData>(API_SLIDER_2, {
-      headers: {
-        "X-API-KEY": API_KEY,
-        "Content-Type": "application/json",
-      },
-    });
-    setMovies(response.data);
-  }
+  const [movies, setMovies] = useState<TMovieResponseData>();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    async function getMovies() {
+      setLoading(true);
+      const response = await NewMoviesService.getAllFilms();
+      setMovies(response);
+      setLoading(false);
+    }
     getMovies();
   }, []);
 
   return (
     <div className="main-slider">
       <p className="title-slider">Новые фильмы</p>
+      {loading && <div className="loader">Загрузка...</div>}
       <div className="movies-slider">
         {movies &&
-          movies.items.map((movie: TMovie) => (
+          movies.items &&
+          movies?.items.length > 3 &&
+          movies?.items.map((movie: TMovie) => (
             <Movie movie={movie} key={movie.kinopoiskId} />
           ))}
       </div>

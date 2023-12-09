@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { TFilm } from "../../data/data";
 import { useParams } from "react-router-dom";
-import { getFilm } from "../../data/FilmService";
+import { getFilm } from "../../data/get.film";
 import "./MoviePage.css";
 
 export function MoviePage() {
@@ -41,44 +41,27 @@ export function MoviePage() {
               preload="metadata"
             ></video>
             <div className="video-hud">
-              <div
-                className="video-hud__element video-hud__action video-hud__action_play"
-                id="video-hud__action"
-              ></div>
-              <div
-                className="video-hud__element video-hud__curr-time"
-                id="video-hud__curr-time"
-              >
+              <div className="video-hud__element video-hud__curr-time">
                 00:00
               </div>
               <progress
                 value="0"
                 max="100"
                 className="video-hud__element video-hud__progress-bar"
-                id="video-hud__progress-bar"
               ></progress>
-              <div
-                className="video-hud__element video-hud__duration"
-                id="video-hud__duration"
-              >
+              <div className="video-hud__element video-hud__duration">
                 00:00
               </div>
-              <div
-                className="video-hud__element video-hud__mute video-hud__mute_false"
-                id="video-hud__mute"
-              ></div>
               <input
                 type="range"
                 value="100"
                 max="100"
                 title="Громкость"
                 className="video-hud__element video-hud__volume"
-                id="video-hud__volume"
               ></input>
               <select
                 title="Скорость"
                 className="video-hud__element video-hud__speed"
-                id="video-hud__speed"
               >
                 <option value="25">x0.25</option>
                 <option value="50">x0.50</option>
