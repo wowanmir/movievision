@@ -8,40 +8,35 @@
 
 .filter {
   display: flex;
-  max-height: 30%;
-  border: 5px solid gold;
-  flex-flow: column wrap;
   flex-wrap: wrap;
-  height: 30%;
-  align-content: space-around;
+  height: 20%;
+  align-content: top;
   justify-content: space-around;
   gap: 5px;
-  overflow: hidden;
 }
 
+/* .select-settings{
+background-color: ;
+} */
 .select {
-  width: 200px;
-  font-size: 15px;
-  color: rgb(0, 0, 0);
+  width: 250px;
+  font-size: 18px;
+  color: black;
   margin-top: 5px;
 }
 
 .movies-page {
   display: flex;
-  max-height: 70%;
-  max-width: 100%;
-  border: 5px solid blue;
-  height: 70%;
+  height: 100%;
   gap: 5px;
   white-space:pre-wrap;
-  overflow: hidden;
 }
 
 .movies-main {
   display: flex;
-  flex-flow: column wrap;
-  width: 195px;
-  height: 315px;
+  flex-flow: wrap;
+  width: 100%;
+  height: 100%;
   padding: 6px;
 }
 

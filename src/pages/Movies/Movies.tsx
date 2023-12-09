@@ -37,31 +37,25 @@ export const Movies = () => {
   return (
     <div className="movies-container">
       <div className="filter">
-        <div>
-          Страна
-          <Select className="select" options={countries} />
+        <div className="select-settings">
+          <Select className="select" options={countries} placeholder="Страна" />
         </div>
         <div>
-          Жанр
-          <Select className="select" options={genres} />
+          <Select className="select" options={genres} placeholder="Жанр" />
         </div>
         <div>
-          Рейтинг
-          <Select className="select" options={ratings} />
+          <Select className="select" options={ratings} placeholder="Рейтинг" />
         </div>
         <div>
-          Год
-          <Select className="select" options={years} />
+          <Select className="select" options={years} placeholder="Год" />
         </div>
       </div>
       <div className="movies-page">
         <div className="movies-main">
           {movies &&
-            movies.items
-              .slice(0, 7)
-              .map((movie: TMovie) => (
-                <Movie movie={movie} key={movie.kinopoiskId} />
-              ))}
+            movies.items.map((movie: TMovie) => (
+              <Movie movie={movie} key={movie.kinopoiskId} />
+            ))}
         </div>
       </div>
     </div>
