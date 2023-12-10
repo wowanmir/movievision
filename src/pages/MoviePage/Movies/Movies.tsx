@@ -11,7 +11,8 @@ export const Movies = () => {
   const genres = getGenres();
   const ratings = getRatings();
   const years = getYears();
-  const [movies, setMovies] = useState<TMovieResponseData>();
+  const [movies, setMovies] = useState<TMovieResponseData>(
+  );
 
   async function getMovies() {
     const response = await CategoryService.getCategory();

@@ -67,8 +67,8 @@ export const CategoryService = {
 };
 
 export const MovieService = {
-  async getFilm() {
-    const response = await axios.get<TFilm>(FILM1, {
+  async getFilm(kinopoiskId: number) {
+    const response = await axios.get<TFilm>(`${BASE_API_URL}/${kinopoiskId}`, {
       headers: {
         "X-API-KEY": API_KEY,
         "Content-Type": "application/json",
