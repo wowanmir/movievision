@@ -6,10 +6,10 @@ import "./MoviePage.css";
 
 export const MoviePage = () => {
   const [loading, setLoading] = useState(false);
-  let kinopoiskId = useParams().kinopoiskId;
+  const kinopoiskId = useParams().kinopoiskId;
   const [film, setFilm] = useState<TFilm>();
 
-  async function movieData(kinopoiskId: number ) {
+  async function movieData(kinopoiskId: number) {
     setLoading(true);
     const response = await MovieService.getFilm(kinopoiskId);
     setFilm(response.data);
@@ -17,7 +17,9 @@ export const MoviePage = () => {
   }
 
   useEffect(() => {
-    movieData(kinopoiskId);
+    if (kinopoiskId) {
+      movieData(kinopoiskId);
+    }
   }, [kinopoiskId]);
 
   return (
@@ -38,6 +40,7 @@ export const MoviePage = () => {
               alt={film?.nameRu}
             />
           </div>
+
           <div className="video-container">
             <video
               className="video-player"

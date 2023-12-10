@@ -101,3 +101,8 @@ export type TMovieTrailerResponseData = {
   totalPages: number;
   items: TMovieTrailer[];
 };
+
+export interface IOptions {
+  value: string;
+  label: string;
+}

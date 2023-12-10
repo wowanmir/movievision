@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Animations } from "./pages/Animations/Animations";
-import { Movies } from "./pages/MoviePage/Movies/Movies";
+import { Movies } from "./pages/Movies/Movies";
 import { Series } from "./pages/Series/Series";
 import { NotFound } from "./pages/Home/MoviesMain/NotFound";
 import { Home } from "./pages/Home/Home";

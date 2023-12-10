@@ -14,20 +14,6 @@ import { UserProfileIcon } from "../icons/user-profile-icon";
 import { LogOutIcon } from "../icons/log-out-icon";
 import { NotificationsIcon } from "../icons/notifications-icon";
 
-const options = [
-  {
-    value: "movies",
-    label: "Фильмы",
-  },
-  {
-    value: "series",
-    label: "Сериалы",
-  },
-  {
-    value: "animations",
-    label: "Мультфильмы",
-  },
-];
 export const Sidebar = () => {
   return (
     <>

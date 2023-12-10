@@ -14,3 +14,4 @@ export {
   CategoryIcon,
   AvatarIcon,
 } from "./icons";
+export { getCountries, getGenres, getRatings, getYears } from "./category";

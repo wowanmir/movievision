@@ -18,4 +18,7 @@ export type {
   TFilm,
   TMovieTrailer,
   TMovieTrailerResponseData,
+  IOptions,
 } from "./data";
+
+

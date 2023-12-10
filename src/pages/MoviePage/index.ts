@@ -1,2 +1,2 @@
-export { MoviePage } from './MoviePage';
-export { Movies } from './Movies';
+export { MoviePage } from "./MoviePage";
+export { Movies } from "../Movies";
