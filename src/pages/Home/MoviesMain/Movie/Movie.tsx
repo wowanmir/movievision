@@ -8,7 +8,9 @@ export function Movie({ movie }: MovieProps) {
   return (
     <div className="movie-slider">
       <div className="poster">
-        <img src={movie.posterUrlPreview} alt={movie.nameRu} />
+        <a href={`/movie/${movie.kinopoiskId}`}>
+          <img src={movie.posterUrlPreview} alt={movie.nameRu} />
+        </a>
       </div>
       <div className="details">
         <p>{movie.nameRu}</p>
