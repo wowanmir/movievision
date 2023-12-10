@@ -1,10 +1,9 @@
 import Select from "react-select";
 import { useEffect, useState } from "react";
-import { API_KEY } from "../../../data/api";
 import { Movie } from "../../Home/MoviesMain/Movie/Movie";
 import { TMovie, TMovieResponseData } from "../../../data/data";
 import { getCountries, getGenres, getRatings, getYears } from "./category";
-import axios from "axios";
+import { CategoryService } from "../../../data/movie.service";
 import "./Movies.css";
 
 export const Movies = () => {
@@ -12,21 +11,10 @@ export const Movies = () => {
   const genres = getGenres();
   const ratings = getRatings();
   const years = getYears();
-
-  const [movies, setMovies] = useState<TMovieResponseData | undefined>(
-    undefined
-  );
+  const [movies, setMovies] = useState<TMovieResponseData>();
 
   async function getMovies() {
-    const response = await axios.get<TMovieResponseData>(
-      "https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&genres=1&order=RATING&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000",
-      {
-        headers: {
-          "X-API-KEY": API_KEY,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const response = await CategoryService.getCategory();
     setMovies(response.data);
   }
 

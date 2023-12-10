@@ -2,6 +2,7 @@ export {
   HitMoviesService,
   NewMoviesService,
   RecMoviesService,
+  MovieService,
 } from "./movie.service";
 export {
   BASE_API_URL,
@@ -18,4 +19,3 @@ export type {
   TMovieTrailer,
   TMovieTrailerResponseData,
 } from "./data";
-export { getFilm } from "./get.film";
