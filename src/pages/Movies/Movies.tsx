@@ -9,9 +9,9 @@ import {
   getYears,
 } from "../../components/category/category";
 import { CategoryService } from "../../data/movie.service";
+import makeAnimated from "react-select/animated";
 import "./Movies.css";
-import './select.scss';
-import makeAnimated from 'react-select/animated';
+import "./select.scss";
 
 export const Movies = () => {
   const countries = getCountries();
@@ -21,7 +21,7 @@ export const Movies = () => {
   const [currentCategory, setCurrentCategory] = useState<any>("");
   const [movies, setMovies] = useState<TMovieResponseData>();
   const animatedComponents = makeAnimated();
-  
+
   async function getMovies() {
     const response = await CategoryService.getCategory();
     setMovies(response.data);

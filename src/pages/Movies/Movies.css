@@ -8,28 +8,15 @@
 
 .filter {
   display: flex;
-  flex-wrap: wrap;
-  height: 20%;
-  align-content: top;
-  justify-content: space-around;
-  gap: 5px;
-}
-
-/* .select-settings{
-background-color: ;
-} */
-.select {
-  width: 250px;
-  font-size: 18px;
-  color: black;
-  margin-top: 5px;
+  justify-content: center;
+  gap: 70px;
 }
 
 .movies-page {
   display: flex;
   height: 100%;
   gap: 5px;
-  white-space:pre-wrap;
+  white-space: pre-wrap;
 }
 
 .movies-main {

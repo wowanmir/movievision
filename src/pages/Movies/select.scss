@@ -1,4 +1,3 @@
-
 @keyframes scaleIn {
   0% {
     opacity: 0;
@@ -18,11 +17,12 @@
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    border-bottom: 1px solid #fff !important;
+    border-bottom: 1px solid #cfcfcf !important;
     box-shadow: none !important;
+    min-width: 150px !important;
 
     &--menu-is-open {
-      border-color: #bd2b2b !important;
+      border-color: #222d3a !important;
     }
   }
   &__value-container {
@@ -31,7 +31,7 @@
   }
 
   &__input-container {
-    color: #868080 !important;
+    color: white !important;
   }
   &__indicator-separator {
     display: none !important;
@@ -41,38 +41,38 @@
   }
 
   &__indicator {
-    color: #868080 !important;
+    color: rgb(206, 206, 206) !important;
     &:hover {
-      color: #cfcece !important;
+      color: #0059be !important;
     }
   }
 
   &__multi-value {
-    background-color: #000000 !important;
+    background-color: #062750 !important;
     border-radius: 0.5rem !important;
   }
 
   &__multi-value__label {
     font-size: 80% !important;
-    color: rgba(#fff, 0.7) !important;
+    color: rgba(#ffffff, 0.9) !important;
   }
 
   &__multi-value__remove {
-    color: rgba(#fff, 0.8) !important;
+    color: rgba(#e42f2fec, 0.8) !important;
     &:hover {
       background-color: transparent !important;
-      color: #fff !important;
+      color: #005bc4 !important;
     }
   }
   &__menu {
-    background-color: #5a6166 !important;
-    color: rgba(black, 0.6) !important;
+    background-color: #222d3a !important;
+    color: rgba(rgb(255, 255, 255), 0.8) !important;
     animation: scaleIn 0.35s ease-in-out;
   }
   &__option {
     cursor: pointer !important;
     &--is-focused {
-      background-color: lighten(#868080, 8%) !important;
+      background-color: lighten(#090a0f, 8%) !important;
     }
   }
 

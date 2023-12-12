@@ -1,6 +1,6 @@
 import Select from "react-select";
 import { useEffect, useState } from "react";
-import { Movie } from "../Home/MoviesMain/Movie/Movie";
+import { Serial } from "./Serial/Serial";
 import { TMovie, TMovieResponseData } from "../../data/data";
 import {
   getCountries,
@@ -9,9 +9,9 @@ import {
   getYears,
 } from "../../components/category/category";
 import { CategoryService } from "../../data/movie.service";
-import "./Series.css";
+import "../Movies/Movies.css";
 
-export const Series = () => {
+export const Serials = () => {
   const countries = getCountries();
   const genres = getGenres();
   const ratings = getRatings();
@@ -87,7 +87,7 @@ export const Series = () => {
         <div className="movies-main">
           {movies &&
             movies.items.map((movie: TMovie) => (
-              <Movie movie={movie} key={movie.kinopoiskId} />
+              <Serial movie={movie} key={movie.kinopoiskId} />
             ))}
         </div>
       </div>

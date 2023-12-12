@@ -1,14 +1,14 @@
-import { TMovie } from "..//..//../data/data";
+import { TMovie } from "../../../data/data";
 import { Link } from "react-router-dom";
-import "./Movie.css";
+import "../../Movies/Movie/Movie.css";
 interface MovieProps {
   movie: TMovie;
 }
-export function Movie({ movie }: MovieProps) {
+export function Serial({ movie }: MovieProps) {
   return (
     <div className="movie-slider">
       <div className="poster">
-        <a href={`/movie/${movie.kinopoiskId}`}>
+        <a href={`/serial/${movie.kinopoiskId}`}>
           <img src={movie.posterUrlPreview} alt={movie.nameRu} />
         </a>
       </div>
@@ -18,7 +18,7 @@ export function Movie({ movie }: MovieProps) {
       </div>
       <Link
         className="movie-btn"
-        to={{ pathname: `/movie/${movie.kinopoiskId}` }}
+        to={{ pathname: `/serial/${movie.kinopoiskId}` }}
       >
         Подробнее
       </Link>

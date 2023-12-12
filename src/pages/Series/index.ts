@@ -1,1 +1,1 @@
-export { Series } from './Series';
+export { Serials } from "./Serials";
