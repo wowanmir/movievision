@@ -28,8 +28,8 @@ export const MovieCategoryIcon = ({ size }) => {
           y2="12.8882"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6F7DFF" />
-          <stop offset="1" stop-color="#0019FE" />
+          <stop stop-color="#579e63" />
+          <stop offset="1" stop-color="#579e63" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1_5062"
@@ -39,8 +39,8 @@ export const MovieCategoryIcon = ({ size }) => {
           y2="12.8882"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#6F7DFF" />
-          <stop offset="1" stop-color="#0019FE" />
+          <stop stop-color="#579e63" />
+          <stop offset="1" stop-color="#579e63" />
         </linearGradient>
       </defs>
     </svg>

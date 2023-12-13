@@ -9,7 +9,7 @@ export const MenuIcon = ({ size }) => {
     >
       <path
         d="M3 17H21M3 12H21M3 7H21"
-        stroke="white"
+        stroke="#579e63"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

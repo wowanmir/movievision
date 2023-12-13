@@ -15,7 +15,7 @@ import { UserProfileIcon } from "../icons/user-profile-icon";
 import { LogOutIcon } from "../icons/log-out-icon";
 import { NotificationsIcon } from "../icons/notifications-icon";
 
-const setActive = ({ isActive }: any ) =>
+const setActive = ({ isActive }: any) =>
   isActive ? "text-name-active" : "text-name";
 export const Sidebar = () => {
   return (
@@ -30,29 +30,29 @@ export const Sidebar = () => {
         <div className="sidebar">
           <LineIcon />
           <div>
-            <MenuIcon size="15" /> Меню
+            <MenuIcon size="18" /> Меню
           </div>
           <div className="navigation">
-            <div className="text-name-color">
+            <div>
               <HomeIcon size="15" />
               <NavLink className={setActive} to="/">
                 {" "}
                 Домой
               </NavLink>
             </div>
-            <div className="text-name-color">
+            <div>
               <MovieCategoryIcon size="20" />
               <NavLink className={setActive} to="/movies">
                 Фильмы
               </NavLink>
             </div>
-            <div className="text-name-color">
+            <div>
               <MovieCategoryIcon size="20" />
               <NavLink className={setActive} to="/serials">
                 Сериалы
               </NavLink>
             </div>
-            <div className="text-name-color">
+            <div>
               <MovieCategoryIcon size="20" />
               <NavLink className={setActive} to="/animations">
                 Мультфильмы
@@ -62,16 +62,16 @@ export const Sidebar = () => {
           <LineIcon />
           <div className="profile">
             <p>
-              <AvatarIcon size="15" /> Volodia
+              <AvatarIcon size="17" /> Volodia
             </p>
             <p>
-              <UserProfileIcon size="20" /> Профиль
+              <UserProfileIcon size="18" /> Профиль
             </p>
             <p>
               <NotificationsIcon size="20" /> Уведомления
             </p>
             <p>
-              <WatchListIcon size="17" /> Избранное
+              <WatchListIcon size="20" /> Избранное
             </p>
             <p>
               <LogOutIcon size="20" /> Выйти

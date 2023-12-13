@@ -41,9 +41,10 @@
   flex-direction: column;
   width: 100%;
   gap: 35px;
+  
 }
 
-.navigation :active{
+.navigation :active {
   color: #000;
 }
 
@@ -51,7 +52,7 @@
   font-size: 18px;
   padding-left: 3px;
   text-decoration: none;
-  color: #579e63;
+  color: #6beb21;
 }
 
 .text-name {
@@ -59,6 +60,7 @@
   padding-left: 3px;
   text-decoration: none;
   color: #ffffff;
+  
 }
 
 .search-panel {
@@ -81,7 +83,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: left;
   gap: 20px;
 }
 
