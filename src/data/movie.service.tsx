@@ -8,6 +8,7 @@ import {
   TOP_POPULAR_MOVIES,
   SERIALS,
   MOVIES,
+  ANIMATIONS,
 } from "./api";
 export const HitMoviesService = {
   async getAllFilms() {
@@ -54,9 +55,9 @@ export const RecMoviesService = {
   },
 };
 
-export const MoviesService = {
-  async getCategory() {
-    const response = await axios.get<TMovieResponseData>(BASE_API_URL + MOVIES, {
+export const MovieService = {
+  async getFilm(kinopoiskId: number) {
+    const response = await axios.get<TFilm>(`${BASE_API_URL}/${kinopoiskId}`, {
       headers: {
         "X-API-KEY": API_KEY,
         "Content-Type": "application/json",
@@ -65,6 +66,22 @@ export const MoviesService = {
     return response;
   },
 };
+
+export const MoviesService = {
+  async getCategory() {
+    const response = await axios.get<TMovieResponseData>(
+      BASE_API_URL + MOVIES,
+      {
+        headers: {
+          "X-API-KEY": API_KEY,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response;
+  },
+};
+
 export const SerialsService = {
   async getCategory() {
     const response = await axios.get<TMovieResponseData>(
@@ -80,14 +97,17 @@ export const SerialsService = {
   },
 };
 
-export const MovieService = {
-  async getFilm(kinopoiskId: number) {
-    const response = await axios.get<TFilm>(`${BASE_API_URL}/${kinopoiskId}`, {
-      headers: {
-        "X-API-KEY": API_KEY,
-        "Content-Type": "application/json",
-      },
-    });
+export const AnimationsService = {
+  async getCategory() {
+    const response = await axios.get<TMovieResponseData>(
+      BASE_API_URL + ANIMATIONS,
+      {
+        headers: {
+          "X-API-KEY": API_KEY,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     return response;
   },
 };

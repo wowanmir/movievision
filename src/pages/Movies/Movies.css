@@ -18,8 +18,7 @@
   width: 99%;
   height: 100%;
   padding: 6px;
-  column-gap: 70px;
-  gap: 70px;
+  gap: 35px 70px;
   justify-content: space-around;
 }
 

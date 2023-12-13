@@ -9,6 +9,7 @@ export const TOP_NEW_MOVIES = "?&order=RATING&type=FILM&ratingFrom=06&ratingTo=1
 export const TOP_POPULAR_MOVIES = "/collections?type=TOP_POPULAR_MOVIES";
 export const MOVIES = "?countries=1&genres=1&order=RATING&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
 export const SERIALS = "?countries=1&genres=1&order=RATING&type=TV_SERIES&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
+export const ANIMATIONS = "?countries=1&genres=18&order=NUM_VOTE&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
 
 
 export const API_VIDEOS= `https://kinopoiskapiunofficial.tech/api/v2.2/films/{filmId}/videos`;
