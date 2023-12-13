@@ -6,8 +6,8 @@ import {
   TOP_250_MOVIES,
   TOP_NEW_MOVIES,
   TOP_POPULAR_MOVIES,
-  CATEGORY,
-  FILM1,
+  SERIALS,
+  MOVIES,
 } from "./api";
 export const HitMoviesService = {
   async getAllFilms() {
@@ -54,14 +54,28 @@ export const RecMoviesService = {
   },
 };
 
-export const CategoryService = {
+export const MoviesService = {
   async getCategory() {
-    const response = await axios.get<TMovieResponseData>(CATEGORY, {
+    const response = await axios.get<TMovieResponseData>(BASE_API_URL + MOVIES, {
       headers: {
         "X-API-KEY": API_KEY,
         "Content-Type": "application/json",
       },
     });
+    return response;
+  },
+};
+export const SerialsService = {
+  async getCategory() {
+    const response = await axios.get<TMovieResponseData>(
+      BASE_API_URL + SERIALS,
+      {
+        headers: {
+          "X-API-KEY": API_KEY,
+          "Content-Type": "application/json",
+        },
+      }
+    );
     return response;
   },
 };

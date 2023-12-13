@@ -5,6 +5,7 @@
   align-items: center;
   gap: 10px;
   font-size: 25px;
+  color: #ffffff;
 }
 
 .side-box {
@@ -14,7 +15,6 @@
   padding: 15px 0px;
   box-sizing: border-box;
   font: normal 17px/1 Arial, Helvetica, sans-serif;
-  color: white;
   -o-text-overflow: clip;
   text-overflow: clip;
   letter-spacing: 3px;
@@ -30,27 +30,35 @@
   flex-direction: column;
   margin: 0 15px;
   padding: 15px 0;
-  height: 700px;
+  min-height: 700px;
   width: 90%;
   gap: 35px;
-}
-
-.home-link {
-  text-decoration: none;
+  color: #ffffff;
 }
 
 .navigation {
   display: flex;
   flex-direction: column;
   width: 100%;
-  align-items: left;
   gap: 35px;
+}
+
+.navigation :active{
+  color: #000;
+}
+
+.text-name-active {
+  font-size: 18px;
+  padding-left: 3px;
+  text-decoration: none;
+  color: #579e63;
 }
 
 .text-name {
   font-size: 18px;
-  padding-left: 23px;
+  padding-left: 3px;
   text-decoration: none;
+  color: #ffffff;
 }
 
 .search-panel {
@@ -74,7 +82,7 @@
   flex-direction: column;
   width: 100%;
   align-items: left;
-  gap: 25px;
+  gap: 20px;
 }
 
 svg {

@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 15px;
+  gap: 25px;
 }
 
 .filter {
@@ -12,19 +12,15 @@
   gap: 70px;
 }
 
-.movies-page {
-  display: flex;
-  height: 100%;
-  gap: 5px;
-  white-space: pre-wrap;
-}
-
 .movies-main {
   display: flex;
   flex-flow: wrap;
-  width: 100%;
+  width: 99%;
   height: 100%;
   padding: 6px;
+  column-gap: 70px;
+  gap: 70px;
+  justify-content: space-around;
 }
 
 .movies-main img {

@@ -1,15 +1,17 @@
-import Select from "react-select";
+import Select, { OnChangeValue } from "react-select";
 import { useEffect, useState } from "react";
+import makeAnimated from "react-select/animated";
 import { Serial } from "./Serial/Serial";
-import { TMovie, TMovieResponseData } from "../../data/data";
+import { SerialsService } from "../../data/movie.service";
+import { IOptions, TMovie, TMovieResponseData } from "../../data/data";
 import {
   getCountries,
   getGenres,
   getRatings,
   getYears,
 } from "../../components/category/category";
-import { CategoryService } from "../../data/movie.service";
 import "../Movies/Movies.css";
+import "../Movies/select.scss";
 
 export const Serials = () => {
   const countries = getCountries();
@@ -17,73 +19,97 @@ export const Serials = () => {
   const ratings = getRatings();
   const years = getYears();
   const [movies, setMovies] = useState<TMovieResponseData>();
-  const [currentCategory, setCurrentCategory] = useState("");
+    const animatedComponents = makeAnimated();
 
   async function getMovies() {
-    const response = await CategoryService.getCategory();
+    const response = await SerialsService.getCategory();
     setMovies(response.data);
   }
-  const getCountriesCategory = () => {
-    return currentCategory
-      ? countries.find((a) => a.value === currentCategory)
-      : "";
-  };
-  const onChange = (newValue: any) => {
-    setCurrentCategory(newValue.value);
-  };
-  const getGenresCategory = () => {
-    return currentCategory
-      ? genres.find((c) => c.value === currentCategory)
-      : "";
-  };
-  const getRatingsCategory = () => {
-    return currentCategory
-      ? ratings.find((c) => c.value === currentCategory)
-      : "";
-  };
-  const getYearsCategory = () => {
-    return currentCategory
-      ? years.find((c) => c.value === currentCategory)
-      : "";
-  };
+  const [currentCategoryCountries, setCurrentCategoryCountries] =
+  useState<any>("");
+const getCountriesCategory = () => {
+  return currentCategoryCountries
+    ? countries.filter((c) => currentCategoryCountries.indexOf(c.value) >= 0)
+    : [];
+};
+const onChangeCountries = (newValue: OnChangeValue<IOptions, boolean>) => {
+  setCurrentCategoryCountries((newValue as IOptions[]).map((v) => v.value));
+};
 
-  useEffect(() => {
-    getMovies();
-  }, []);
+const [currentGenres, setCurrentGenres] = useState<any>("");
+const getGenresCategory = () => {
+  return currentGenres
+    ? genres.filter((c) => currentGenres.indexOf(c.value) >= 0)
+    : [];
+};
+const onChangeGenres = (newValue: OnChangeValue<IOptions, boolean>) => {
+  setCurrentGenres((newValue as IOptions[]).map((v) => v.value));
+};
 
-  return (
-    <div className="movies-container">
-      <div className="filter">
-        <Select
-          className="select"
-          onChange={onChange}
-          value={getCountriesCategory()}
-          options={countries}
-          placeholder="Страна"
-        />
-        <Select
-          className="select"
-          onChange={onChange}
-          value={getGenresCategory()}
-          options={genres}
-          placeholder="Жанр"
-        />
-        <Select
-          className="select"
-          onChange={onChange}
-          value={getRatingsCategory()}
-          options={ratings}
-          placeholder="Рейтинг"
-        />
-        <Select
-          className="select"
-          onChange={onChange}
-          value={getYearsCategory()}
-          options={years}
-          placeholder="Год"
-        />
-      </div>
-      <div className="movies-page">
+const [currentRatings, setCurrentRatings] = useState<any>("");
+const getRatingsCategory = () => {
+  return currentRatings
+    ? ratings.filter((c) => currentRatings.indexOf(c.value) >= 0)
+    : [];
+};
+const onChangeRatings = (newValue: OnChangeValue<IOptions, boolean>) => {
+  setCurrentRatings((newValue as IOptions[]).map((v) => v.value));
+};
+
+const [currentYears, setCurrentYears] = useState<any>("");
+const getYearsCategory = () => {
+  return currentYears
+    ? years.filter((c) => currentYears.indexOf(c.value) >= 0)
+    : [];
+};
+const onChangeYears = (newValue: OnChangeValue<IOptions, boolean>) => {
+  setCurrentYears((newValue as IOptions[]).map((v) => v.value));
+};
+
+useEffect(() => {
+  getMovies();
+}, []);
+
+return (
+  <div className="movies-container">
+    <div className="filter">
+      <Select
+        classNamePrefix="custom-select"
+        onChange={onChangeCountries}
+        value={getCountriesCategory()}
+        options={countries}
+        placeholder="Страна"
+        isMulti
+        components={animatedComponents}
+      />
+      <Select
+        classNamePrefix="custom-select"
+        onChange={onChangeGenres}
+        value={getGenresCategory()}
+        options={genres}
+        placeholder="Жанр"
+        isMulti
+        components={animatedComponents}
+      />
+      <Select
+        classNamePrefix="custom-select"
+        onChange={onChangeRatings}
+        value={getRatingsCategory()}
+        options={ratings}
+        placeholder="Рейтинг"
+        isMulti
+        components={animatedComponents}
+      />
+      <Select
+        classNamePrefix="custom-select"
+        onChange={onChangeYears}
+        value={getYearsCategory()}
+        options={years}
+        placeholder="Год"
+        isMulti
+        components={animatedComponents}
+      />
+    </div>
         <div className="movies-main">
           {movies &&
             movies.items.map((movie: TMovie) => (
@@ -91,6 +117,5 @@ export const Serials = () => {
             ))}
         </div>
       </div>
-    </div>
   );
 };

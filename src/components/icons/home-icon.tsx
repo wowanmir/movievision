@@ -3,7 +3,7 @@ export const HomeIcon = ({ size }) => {
     <svg
       width={size}
       height={size}
-      viewBox="0 0 28 28"
+      viewBox="2 0 25 28"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >

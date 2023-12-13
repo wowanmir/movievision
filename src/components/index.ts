@@ -13,5 +13,6 @@ export {
   HomeIcon,
   CategoryIcon,
   AvatarIcon,
+  MovieCategoryIcon
 } from "./icons";
 export { getCountries, getGenres, getRatings, getYears } from "./category";

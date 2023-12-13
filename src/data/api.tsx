@@ -7,9 +7,9 @@ export const BASE_API_URL = "https://kinopoiskapiunofficial.tech/api/v2.2/films"
 export const TOP_250_MOVIES = "/collections?type=TOP_250_MOVIES";
 export const TOP_NEW_MOVIES = "?&order=RATING&type=FILM&ratingFrom=06&ratingTo=10&yearFrom=2022&yearTo=2023";
 export const TOP_POPULAR_MOVIES = "/collections?type=TOP_POPULAR_MOVIES";
-export const CATEGORY = "https://kinopoiskapiunofficial.tech/api/v2.2/films?countries=1&genres=1&order=RATING&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
+export const MOVIES = "?countries=1&genres=1&order=RATING&type=FILM&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
+export const SERIALS = "?countries=1&genres=1&order=RATING&type=TV_SERIES&ratingFrom=0&ratingTo=10&yearFrom=1000&yearTo=3000"
 
-// export const MOVIE_PAGE = `${kinopoiskId}`;
 
 export const API_VIDEOS= `https://kinopoiskapiunofficial.tech/api/v2.2/films/{filmId}/videos`;
 export const API_SEARCH = "https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword="

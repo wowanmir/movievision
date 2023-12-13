@@ -13,6 +13,7 @@ export function AppRoutes() {
       <Route path="/serials" element={<Serials />} />
       <Route path="/animations" element={<Animations />} />
       <Route path="/movie/:kinopoiskId" element={<MoviePage />} />
+      <Route path="/serial/:kinopoiskId" element={<MoviePage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

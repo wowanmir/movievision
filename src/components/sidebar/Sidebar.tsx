@@ -7,6 +7,7 @@ import {
   MenuIcon,
   AvatarIcon,
   Icon,
+  MovieCategoryIcon,
 } from "../icons/index";
 import "../content/Content";
 import "./Sidebar.css";
@@ -14,6 +15,8 @@ import { UserProfileIcon } from "../icons/user-profile-icon";
 import { LogOutIcon } from "../icons/log-out-icon";
 import { NotificationsIcon } from "../icons/notifications-icon";
 
+const setActive = ({ isActive }: any ) =>
+  isActive ? "text-name-active" : "text-name";
 export const Sidebar = () => {
   return (
     <>
@@ -30,22 +33,31 @@ export const Sidebar = () => {
             <MenuIcon size="15" /> Меню
           </div>
           <div className="navigation">
-            <div>
+            <div className="text-name-color">
               <HomeIcon size="15" />
-              <NavLink className="home-link" to="/">
+              <NavLink className={setActive} to="/">
                 {" "}
                 Домой
               </NavLink>
             </div>
-            <NavLink className="text-name" to="/movies">
-              Фильмы
-            </NavLink>
-            <NavLink className="text-name" to="/series">
-              Сериалы
-            </NavLink>
-            <NavLink className="text-name" to="/animations">
-              Мультфильмы
-            </NavLink>
+            <div className="text-name-color">
+              <MovieCategoryIcon size="20" />
+              <NavLink className={setActive} to="/movies">
+                Фильмы
+              </NavLink>
+            </div>
+            <div className="text-name-color">
+              <MovieCategoryIcon size="20" />
+              <NavLink className={setActive} to="/serials">
+                Сериалы
+              </NavLink>
+            </div>
+            <div className="text-name-color">
+              <MovieCategoryIcon size="20" />
+              <NavLink className={setActive} to="/animations">
+                Мультфильмы
+              </NavLink>
+            </div>
           </div>
           <LineIcon />
           <div className="profile">

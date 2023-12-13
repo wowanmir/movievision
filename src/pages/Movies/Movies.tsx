@@ -1,6 +1,8 @@
 import Select, { OnChangeValue } from "react-select";
 import { useEffect, useState } from "react";
+import makeAnimated from "react-select/animated";
 import { Movie } from "./Movie/Movie";
+import { MoviesService } from "../../data/movie.service";
 import { IOptions, TMovie, TMovieResponseData } from "../../data/data";
 import {
   getCountries,
@@ -8,8 +10,6 @@ import {
   getRatings,
   getYears,
 } from "../../components/category/category";
-import { CategoryService } from "../../data/movie.service";
-import makeAnimated from "react-select/animated";
 import "./Movies.css";
 import "./select.scss";
 
@@ -18,37 +18,53 @@ export const Movies = () => {
   const genres = getGenres();
   const ratings = getRatings();
   const years = getYears();
-  const [currentCategory, setCurrentCategory] = useState<any>("");
   const [movies, setMovies] = useState<TMovieResponseData>();
   const animatedComponents = makeAnimated();
 
   async function getMovies() {
-    const response = await CategoryService.getCategory();
+    const response = await MoviesService.getCategory();
     setMovies(response.data);
   }
+
+  const [currentCategoryCountries, setCurrentCategoryCountries] =
+    useState<any>("");
   const getCountriesCategory = () => {
-    return currentCategory
-      ? countries.filter((c) => currentCategory.indexOf(c.value) >= 0)
+    return currentCategoryCountries
+      ? countries.filter((c) => currentCategoryCountries.indexOf(c.value) >= 0)
       : [];
   };
-  const onChange = (newValue: OnChangeValue<IOptions, boolean>) => {
-    setCurrentCategory((newValue as IOptions[]).map((v) => v.value));
+  const onChangeCountries = (newValue: OnChangeValue<IOptions, boolean>) => {
+    setCurrentCategoryCountries((newValue as IOptions[]).map((v) => v.value));
   };
 
+  const [currentGenres, setCurrentGenres] = useState<any>("");
   const getGenresCategory = () => {
-    return currentCategory
-      ? genres.filter((c) => currentCategory.indexOf(c.value) >= 0)
+    return currentGenres
+      ? genres.filter((c) => currentGenres.indexOf(c.value) >= 0)
       : [];
   };
+  const onChangeGenres = (newValue: OnChangeValue<IOptions, boolean>) => {
+    setCurrentGenres((newValue as IOptions[]).map((v) => v.value));
+  };
+
+  const [currentRatings, setCurrentRatings] = useState<any>("");
   const getRatingsCategory = () => {
-    return currentCategory
-      ? ratings.filter((c) => currentCategory.indexOf(c.value) >= 0)
+    return currentRatings
+      ? ratings.filter((c) => currentRatings.indexOf(c.value) >= 0)
       : [];
   };
+  const onChangeRatings = (newValue: OnChangeValue<IOptions, boolean>) => {
+    setCurrentRatings((newValue as IOptions[]).map((v) => v.value));
+  };
+
+  const [currentYears, setCurrentYears] = useState<any>("");
   const getYearsCategory = () => {
-    return currentCategory
-      ? years.filter((c) => currentCategory.indexOf(c.value) >= 0)
+    return currentYears
+      ? years.filter((c) => currentYears.indexOf(c.value) >= 0)
       : [];
+  };
+  const onChangeYears = (newValue: OnChangeValue<IOptions, boolean>) => {
+    setCurrentYears((newValue as IOptions[]).map((v) => v.value));
   };
 
   useEffect(() => {
@@ -60,7 +76,7 @@ export const Movies = () => {
       <div className="filter">
         <Select
           classNamePrefix="custom-select"
-          onChange={onChange}
+          onChange={onChangeCountries}
           value={getCountriesCategory()}
           options={countries}
           placeholder="Страна"
@@ -69,7 +85,7 @@ export const Movies = () => {
         />
         <Select
           classNamePrefix="custom-select"
-          onChange={onChange}
+          onChange={onChangeGenres}
           value={getGenresCategory()}
           options={genres}
           placeholder="Жанр"
@@ -78,7 +94,7 @@ export const Movies = () => {
         />
         <Select
           classNamePrefix="custom-select"
-          onChange={onChange}
+          onChange={onChangeRatings}
           value={getRatingsCategory()}
           options={ratings}
           placeholder="Рейтинг"
@@ -87,7 +103,7 @@ export const Movies = () => {
         />
         <Select
           classNamePrefix="custom-select"
-          onChange={onChange}
+          onChange={onChangeYears}
           value={getYearsCategory()}
           options={years}
           placeholder="Год"
@@ -95,13 +111,11 @@ export const Movies = () => {
           components={animatedComponents}
         />
       </div>
-      <div className="movies-page">
-        <div className="movies-main">
-          {movies &&
-            movies.items.map((movie: TMovie) => (
-              <Movie movie={movie} key={movie.kinopoiskId} />
-            ))}
-        </div>
+      <div className="movies-main">
+        {movies &&
+          movies.items.map((movie: TMovie) => (
+            <Movie movie={movie} key={movie.kinopoiskId} />
+          ))}
       </div>
     </div>
   );
