@@ -1,6 +1,6 @@
-import { TMovie } from "../../../data/data";
+import { TMovie } from "../../data/data";
 import { Link } from "react-router-dom";
-import "../../../components/Movie/Movie.css";
+import "../../components/Movie/Movie.css";
 interface MovieProps {
   movie: TMovie;
 }

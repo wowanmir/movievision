@@ -16,12 +16,14 @@ export function Movie({ movie }: MovieProps) {
         <p>{movie.nameRu}</p>
         Рейтинг: {movie.ratingKinopoisk}
       </div>
-      <Link
-        className="movie-btn"
-        to={{ pathname: `/movie/${movie.kinopoiskId}` }}
-      >
-        Подробнее
-      </Link>
+      <div className="movie-btn">
+        <Link
+          
+          to={{ pathname: `/movie/${movie.kinopoiskId}` }}
+        >
+          Подробнее
+        </Link>
+      </div>
     </div>
   );
 }
