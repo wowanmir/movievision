@@ -10,7 +10,7 @@ import {
   getRatings,
   getYears,
 } from "../../components/category/category";
-import "../Movies/Movies.css";
+import "../../components/Movie/Movie.css";
 import "../Movies/select.scss";
 
 export const Animations = () => {

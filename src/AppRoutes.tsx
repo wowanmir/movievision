@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Animations } from "./pages/Animations/Animations";
 import { Movies } from "./pages/Movies/Movies";
 import { Serials } from "./pages/Series/Serials";
-import { NotFound } from "./pages/Home/MoviesMain/NotFound";
+import { NotFound } from "./pages/NotFound";
 import { Home } from "./pages/Home/Home";
 import { MoviePage } from "./pages/MoviePage/MoviePage";
 export function AppRoutes() {

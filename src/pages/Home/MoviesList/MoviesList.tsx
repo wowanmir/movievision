@@ -1,23 +1,14 @@
-import { useEffect, useState } from "react";
 import { TMovie, TMovieResponseData } from "../../../data/data";
-import { HitMoviesService } from "../../../data/movie.service";
-import { Movie } from "./Movie/Movie";
+import { Movie } from "../../../components/Movie/Movie";
 import "./SettingsMovie.css";
 
-export const HitMovies = () => {
-  const [movies, setMovies] = useState<TMovieResponseData>();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    async function getMovies() {
-      setLoading(true);
-      const response = await HitMoviesService.getAllFilms();
-      setMovies(response);
-      setLoading(false);
-    }
-    getMovies();
-  }, []);
-
+export const MoviesList = ({
+  loading,
+  movies,
+}: {
+  loading: boolean;
+  movies: TMovieResponseData;
+}) => {
   return (
     <div className="main-slider">
       <p className="title-slider">Высокий рейтинг</p>
