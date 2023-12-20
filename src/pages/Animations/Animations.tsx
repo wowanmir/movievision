@@ -1,7 +1,7 @@
 import Select, { OnChangeValue } from "react-select";
 import { useEffect, useState } from "react";
 import makeAnimated from "react-select/animated";
-import { Animation } from "./Animation";
+import { Animation } from "./Animation/Animation";
 import { AnimationsService } from "../../data/movie.service";
 import { IOptions, TMovie, TMovieResponseData } from "../../data/data";
 import {

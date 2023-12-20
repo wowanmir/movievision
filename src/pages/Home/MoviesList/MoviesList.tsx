@@ -1,5 +1,6 @@
 import { TMovie, TMovieResponseData } from "../../../data/data";
 import { Movie } from "../../../components/Movie/Movie";
+import "../../../components/Movie/Movie.css";
 import "./SettingsMovie.css";
 
 export const MoviesList = ({
