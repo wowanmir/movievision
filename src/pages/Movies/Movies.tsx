@@ -1,7 +1,7 @@
 import Select, { OnChangeValue } from "react-select";
 import { useEffect, useState } from "react";
 import makeAnimated from "react-select/animated";
-import { Movie } from "../../components/Movie/Movie";
+import { Movie } from "./Movie";
 import { MoviesService } from "../../data/movie.service";
 import { IOptions, TMovie, TMovieResponseData } from "../../data/data";
 import {
@@ -11,7 +11,7 @@ import {
   getYears,
 } from "../../components/category/category";
 import "./Movies.css";
-import "./select.scss";
+import "./mov-select.scss";
 
 export const Movies = () => {
   const countries = getCountries();
@@ -73,7 +73,7 @@ export const Movies = () => {
 
   return (
     <div className="movies-container">
-      <div className="filter">
+      <div className="movies-filter">
         <Select
           classNamePrefix="custom-select"
           onChange={onChangeCountries}

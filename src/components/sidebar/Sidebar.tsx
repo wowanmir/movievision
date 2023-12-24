@@ -8,12 +8,12 @@ import {
   AvatarIcon,
   Icon,
   MovieCategoryIcon,
-} from "../icons/index";
-import "../content/Content";
+  UserProfileIcon,
+  LogOutIcon,
+  NotificationsIcon
+} from "../icons";
+import "../content/";
 import "./Sidebar.css";
-import { UserProfileIcon } from "../icons/user-profile-icon";
-import { LogOutIcon } from "../icons/log-out-icon";
-import { NotificationsIcon } from "../icons/notifications-icon";
 
 const setActive = ({ isActive }: any) =>
   isActive ? "text-name-active" : "text-name";

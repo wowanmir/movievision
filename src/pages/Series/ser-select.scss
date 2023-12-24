@@ -1,0 +1,89 @@
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.custom-select {
+  &__control {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 1px solid #cfcfcf !important;
+    box-shadow: none !important;
+    min-width: 150px !important;
+
+    &--menu-is-open {
+      border-color: #222d3a !important;
+    }
+  }
+  &__value-container {
+    padding: 0 !important;
+    cursor: text !important;
+  }
+
+  &__input-container {
+    color: white !important;
+  }
+  &__indicator-separator {
+    display: none !important;
+  }
+  &__indicators {
+    cursor: pointer !important;
+  }
+
+  &__indicator {
+    color: rgb(206, 206, 206) !important;
+    &:hover {
+      color: #0059be !important;
+    }
+  }
+
+  &__multi-value {
+    background-color: #062750 !important;
+    border-radius: 0.5rem !important;
+  }
+
+  &__multi-value__label {
+    font-size: 80% !important;
+    color: rgba(#ffffff, 0.9) !important;
+  }
+
+  &__multi-value__remove {
+    color: rgba(#e42f2fec, 0.8) !important;
+    &:hover {
+      background-color: transparent !important;
+      color: #005bc4 !important;
+    }
+  }
+  &__menu {
+    background-color: #222d3a !important;
+    color: rgba(rgb(255, 255, 255), 0.8) !important;
+    animation: scaleIn 0.35s ease-in-out;
+  }
+  &__option {
+    cursor: pointer !important;
+    &--is-focused {
+      background-color: lighten(#090a0f, 8%) !important;
+    }
+  }
+
+  &-container {
+    > div {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    &:hover,
+    &--menu-is-open {
+      border-color: #cab9b9 !important;
+    }
+  }
+}

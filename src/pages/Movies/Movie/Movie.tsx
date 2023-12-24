@@ -1,24 +1,24 @@
 import { TMovie } from "../../../data/data";
 import { Link } from "react-router-dom";
-import "./Animation.css";
+import "./Movie.css";
 interface MovieProps {
   movie: TMovie;
 }
-export function Animation({ movie }: MovieProps) {
+export function Movie({ movie }: MovieProps) {
   return (
-    <div className="anim-slider">
-      <div className="anim-box">
-        <div className="anim-poster">
-          <a href={`/animation/${movie.kinopoiskId}`}>
+    <div className="movie-slider">
+      <div className="movie-box">
+        <div className="movie-poster">
+          <a href={`/movie/${movie.kinopoiskId}`}>
             <img src={movie.posterUrlPreview} alt={movie.nameRu} />
           </a>
         </div>
-        <div className="anim-details">
+        <div className="movie-details">
           <p>{movie.nameRu}</p>
           Рейтинг: {movie.ratingKinopoisk}
           <Link
-            className="anim-btn"
-            to={{ pathname: `/animation/${movie.kinopoiskId}` }}
+            className="movie-btn"
+            to={{ pathname: `/movie/${movie.kinopoiskId}` }}
           >
             Подробнее
           </Link>

@@ -10,8 +10,8 @@ import {
   getRatings,
   getYears,
 } from "../../components/category/category";
-import "../Movies/Movies.css";
-import "../Movies/select.scss";
+import "./Serials.css";
+import "./ser-select.scss";
 
 export const Serials = () => {
   const countries = getCountries();
@@ -71,8 +71,8 @@ export const Serials = () => {
   }, []);
 
   return (
-    <div className="movies-container">
-      <div className="filter">
+    <div className="serials-container">
+      <div className="serials-filter">
         <Select
           classNamePrefix="custom-select"
           onChange={onChangeCountries}
@@ -110,7 +110,7 @@ export const Serials = () => {
           components={animatedComponents}
         />
       </div>
-      <div className="movies-main">
+      <div className="serials-main">
         {movies &&
           movies.items.map((movie: TMovie) => (
             <Serial movie={movie} key={movie.kinopoiskId} />

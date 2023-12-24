@@ -6,7 +6,7 @@ import {
   NewMoviesService,
   RecMoviesService,
 } from "../../data/movie.service";
-import { MoviesList } from "./MoviesList/MoviesList";
+import { MoviesList } from "./MoviesList";
 import "./Home.css";
 export function Home() {
   const [hitMovies, setHitMovies] = useState<TMovieResponseData>();

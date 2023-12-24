@@ -1,4 +1,4 @@
-.movies-container {
+.anims-container {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -6,13 +6,13 @@
   gap: 25px;
 }
 
-.movies-filter {
+.anims-filter {
   display: flex;
   justify-content: center;
   gap: 70px;
 }
 
-.movies-main {
+.anims-main {
   display: flex;
   flex-flow: wrap;
   width: 99%;
@@ -22,7 +22,7 @@
   justify-content: space-around;
 }
 
-.movies-main img {
+.anims-main img {
   max-width: 100%;
   max-height: 100%;
 }

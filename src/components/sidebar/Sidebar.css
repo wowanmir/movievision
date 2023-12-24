@@ -64,6 +64,11 @@
   
 }
 
+.text-name:hover {
+  color: #6beb21;
+  scale: 1.1;
+}
+
 .search-panel {
   display: inline-flex;
   width: 100%;

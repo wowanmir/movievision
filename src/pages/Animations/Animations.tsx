@@ -10,15 +10,15 @@ import {
   getRatings,
   getYears,
 } from "../../components/category/category";
-import "../../components/Movie/Movie.css";
-import "../Movies/select.scss";
+import "./Animations.css";
+import "./anim-select.scss";
 
 export const Animations = () => {
   const countries = getCountries();
   const genres = getGenres();
   const ratings = getRatings();
   const years = getYears();
-  const [movies, setMovies] = useState<TMovieResponseData>();
+  const [anims, setMovies] = useState<TMovieResponseData>();
   const animatedComponents = makeAnimated();
 
   async function getMovies() {
@@ -71,8 +71,8 @@ export const Animations = () => {
   }, []);
 
   return (
-    <div className="movies-container">
-      <div className="filter">
+    <div className="anims-container">
+      <div className="anims-filter">
         <Select
           classNamePrefix="custom-select"
           onChange={onChangeCountries}
@@ -110,9 +110,9 @@ export const Animations = () => {
           components={animatedComponents}
         />
       </div>
-      <div className="movies-main">
-        {movies &&
-          movies.items.map((movie: TMovie) => (
+      <div className="anims-main">
+        {anims &&
+          anims.items.map((movie: TMovie) => (
             <Animation movie={movie} key={movie.kinopoiskId} />
           ))}
       </div>
