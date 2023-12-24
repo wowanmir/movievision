@@ -1,11 +1,10 @@
 .app {
   display: flex;
-  min-height: 1440px;
-  overflow: hidden;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   width: 100%;
+  min-width: 1440px;
 }

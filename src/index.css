@@ -2,11 +2,35 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  --scrollbarBG: #1b2735;
+  --thumbBG: #090a0f;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  transition: scrollbar-color 0.3s ease-out;
 }
+
+::-webkit-scrollbar {
+  width: 13px;
+  }
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 8px;
+  border: 3px solid var(--scrollbarBG);
+}
+
 .active {
   color: var(--color-active);
   cursor: default;

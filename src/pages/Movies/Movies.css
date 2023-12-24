@@ -3,47 +3,23 @@
   flex-direction: column;
   height: 100%;
   width: 100%;
-  gap: 15px;
+  gap: 25px;
 }
 
-.filter {
+.movies-filter {
   display: flex;
-  max-height: 30%;
-  border: 5px solid gold;
-  flex-flow: column wrap;
-  flex-wrap: wrap;
-  height: 30%;
-  align-content: space-around;
-  justify-content: space-around;
-  gap: 5px;
-  overflow: hidden;
-}
-.title-filter {
-  display: flex;
-  padding: 2px;
-  border: 5px solid wheat;
-  align-items: center;
-  width: 25%;
-  height: 20%;
-}
-
-.movies-page {
-  display: flex;
-  max-height: 70%;
-  max-width: 100%;
-  border: 5px solid blue;
-  height: 70%;
-  gap: 5px;
-  white-space:pre-wrap;
-  overflow: hidden;
+  justify-content: center;
+  gap: 70px;
 }
 
 .movies-main {
   display: flex;
-  flex-flow: column wrap;
-  width: 195px;
-  height: 315px;
+  flex-flow: wrap;
+  width: 99%;
+  height: 100%;
   padding: 6px;
+  gap: 35px 70px;
+  justify-content: space-around;
 }
 
 .movies-main img {

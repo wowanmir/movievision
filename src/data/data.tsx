@@ -28,7 +28,7 @@ export type TMovieResponseData = {
   items: TMovie[];
 };
 
-export type TFilm  = {
+export type TFilm = {
   kinopoiskId: number;
   kinopoiskHDId: string | number;
   imdbId: string;
@@ -58,7 +58,7 @@ export type TFilm  = {
   slogan: string;
   description: string;
   shortDescription: string;
-  editorAnnotation: number | null | string; 
+  editorAnnotation: number | null | string;
   isTicketsAvailable: boolean;
   productionStatus: string;
   type: string;
@@ -91,9 +91,9 @@ export type TFilm  = {
 };
 
 export type TMovieTrailer = {
-      url: string,
-      name: string,
-      site: string,
+  url: string;
+  name: string;
+  site: string;
 };
 
 export type TMovieTrailerResponseData = {
@@ -101,3 +101,8 @@ export type TMovieTrailerResponseData = {
   totalPages: number;
   items: TMovieTrailer[];
 };
+
+export interface IOptions {
+  value: string;
+  label: string;
+}

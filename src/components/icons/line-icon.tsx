@@ -3,7 +3,7 @@ export const LineIcon = () => {
     <svg
       width="100%"
       height="1"
-      viewBox="0 0 1"
+      viewBox="0 0 230 1"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -17,8 +17,8 @@ export const LineIcon = () => {
           y2="1"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="white" stopOpacity="0" />
-          <stop offset="1" stopColor="white" />
+          <stop stopColor="#579e63" stopOpacity="0" />
+          <stop offset="1" stopColor="#579e63" />
         </linearGradient>
       </defs>
     </svg>

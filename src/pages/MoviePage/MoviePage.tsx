@@ -1,49 +1,101 @@
 import { useEffect, useState } from "react";
-import { TFilm } from "../../data/data";
 import { useParams } from "react-router-dom";
-import { getFilm } from "../../data/FilmService";
+import { TFilm } from "../../data/data";
+import { MovieService } from "../../data/movie.service";
 import "./MoviePage.css";
 
-export function MoviePage() {
-  const [film, setFilm] = useState<TFilm | undefined>(undefined);
-  const { kinopoiskId } = useParams();
+export const MoviePage = () => {
+  const [loading, setLoading] = useState(false);
+  const kinopoiskId = useParams().kinopoiskId;
+  const [film, setFilm] = useState<TFilm>();
+
+  async function movieData(kinopoiskId: number) {
+    setLoading(true);
+    const response = await MovieService.getFilm(kinopoiskId);
+    setFilm(response.data);
+    setLoading(false);
+  }
 
   useEffect(() => {
-    async function fetchData() {
-      const filmData = await getFilm(kinopoiskId);
-      setFilm(filmData);
+    if (kinopoiskId) {
+      movieData(kinopoiskId);
     }
-
-    fetchData();
   }, [kinopoiskId]);
 
   return (
-    <div className="movie-body">
-      <img className="movie-poster" src={film?.posterUrl} alt={film?.nameRu} />
-      <div className="movie-trailer">
-        <span className="movie-trailer-title">Здесь должен быть трейлер</span>
-        <span className="movie-trailer-text"> {film?.name}: {film?.site}  </span>
-        <span className="movie-trailer-box" > {film?.webUrl} </span>
-      </div>
-      <div className="movie-details">
-        <span>{film?.nameRu}</span>
-        <span>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</span>
-        <span>Рейтинг IMDb: {film?.ratingImdb}</span>
-        <span>Год: {film?.year}</span>
-        <span>Страна: {film?.countries[0].country}</span>
-        <span>Жанр: {film?.genres[0].genre}</span>
-        <span>Продолжительность: {film?.filmLength} мин.</span>
-      </div>
-      <div className="movie-description">
-        <span className="movie-description-title">О фильме</span>
-        <span className="movie-description-text">{film?.description}</span>
-      </div>
+    <div>
       <div
-        className="movie-background"
+        className="movie-page-background"
         style={{
           backgroundImage: `url(${film?.posterUrl})`,
         }}
       ></div>
+      <div className="movie-page-body">
+        {loading && <div className="loader">Загрузка...</div>}
+        <div className="movie-page-trailer-box">
+          <div className="movie-page-poster-box">
+            <img
+              className="movie-page-poster"
+              src={film?.posterUrl}
+              alt={film?.nameRu}
+              loading="lazy"
+            />
+          </div>
+          <div className="video-container">
+            <video
+              className="video-player"
+              src={film?.posterUrl}
+              id="video-player"
+              preload="metadata"
+            ></video>
+            <div className="video-hud">
+              <div className="video-hud__element">00:00</div>
+              <progress
+                className="video-hud__element"
+                value="0"
+                max="100"
+              ></progress>
+              <div className="video-hud__element ">00:00</div>
+              <input
+                className="video-hud__element"
+                type="range"
+                value="100"
+                max="100"
+                title="Громкость"
+              ></input>
+              <select className="video-hud__element" title="Скорость">
+                <option value="25">x0.25</option>
+                <option value="50">x0.50</option>
+                <option value="75">x0.75</option>
+                <option value="100" selected>
+                  x1.00
+                </option>
+                <option value="125">x1.25</option>
+                <option value="150">x1.50</option>
+                <option value="175">x1.75</option>
+                <option value="200">x2.00</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div className="movie-page-details-box">
+          <div className="movie-page-details">
+            <div>{film?.nameRu}</div>
+            <div>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</div>
+            <div>Рейтинг IMDb: {film?.ratingImdb}</div>
+            <div>Год: {film?.year}</div>
+            <div>Страна: {film?.countries[0].country}</div>
+            <div>Жанр: {film?.genres[0].genre}</div>
+            <div>Продолжительность: {film?.filmLength} мин.</div>
+          </div>
+          <div className="movie-page-description">
+            <div className="movie-page-description-title">О фильме</div>
+            <div className="movie-page-description-text">
+              {film?.description}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};

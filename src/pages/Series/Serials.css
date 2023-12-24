@@ -1,0 +1,28 @@
+.serials-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 25px;
+}
+
+.serials-filter {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.serials-main {
+  display: flex;
+  flex-flow: wrap;
+  width: 99%;
+  height: 100%;
+  padding: 6px;
+  gap: 35px 70px;
+  justify-content: space-around;
+}
+
+.serials-main img {
+  max-width: 100%;
+  max-height: 100%;
+}

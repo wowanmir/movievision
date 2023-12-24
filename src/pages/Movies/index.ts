@@ -1,1 +1,1 @@
-export { Movies } from './Movies';
+export { Movies } from "./Movies";

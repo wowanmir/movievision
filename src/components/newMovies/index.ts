@@ -1,1 +1,0 @@
-export { NewMovies } from './NewMovies';

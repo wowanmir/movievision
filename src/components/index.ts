@@ -1,20 +1,18 @@
-export { HitMovies } from "./hitMovies";
 export { Content } from "./content";
-export {
-  AvatarIcon,
-  CategoryIcon,
-  HomeIcon,
-  Icon,
-  LineIcon,
-  MenuIcon,
-  SearchIcon,
-  WatchListIcon,
-} from "./icons";
-export { Movie } from "./movie";
-export { NewMovies } from "./newMovies";
-export { NotFound } from "./notFound";
-export { RecommendedMovies } from "./recommendedMovies";
-export { Serial } from "./serial";
+export { Footer } from "./footer";
 export { Sidebar } from "./sidebar";
-export { Footer } from './footer';
-export { Header } from './Header';
+export {
+  UserProfileIcon,
+  WatchListIcon,
+  SearchIcon,
+  NotificationsIcon,
+  MenuIcon,
+  LogOutIcon,
+  LineIcon,
+  Icon,
+  HomeIcon,
+  CategoryIcon,
+  AvatarIcon,
+  MovieCategoryIcon,
+} from "./icons";
+export { getCountries, getGenres, getRatings, getYears } from "./category";

@@ -1,7 +1,7 @@
 
 import "./App.css";
 import { AppRoutes } from "./AppRoutes";
-import { Content, Footer, Header, Sidebar } from "./components";
+import { Content, Footer, Sidebar } from "./components";
 function App() {
   return (
     <div className="app">
@@ -10,7 +10,6 @@ function App() {
         <Footer />
       </div>
       <div className="container">
-        <Header />
         <Content>
           <AppRoutes />
         </Content>

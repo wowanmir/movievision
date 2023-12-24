@@ -1,0 +1,1 @@
+export { MovieHome } from './MovieHome';
