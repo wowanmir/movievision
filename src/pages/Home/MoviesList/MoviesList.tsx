@@ -5,13 +5,14 @@ import "./MoviesList.css";
 export const MoviesList = ({
   loading,
   movies,
+  title
 }: {
   loading: boolean;
   movies: TMovieResponseData;
 }) => {
   return (
     <div className="main-slider">
-      <p className="title-slider">Высокий рейтинг</p>
+      <p className="title-slider">{title}</p>
       {loading && <div> Загрузка...</div>}
       <div className="movies-slider">
         {movies &&

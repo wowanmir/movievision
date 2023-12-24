@@ -25,22 +25,22 @@ export const MoviePage = () => {
   return (
     <div>
       <div
-        className="movie-background"
+        className="movie-page-background"
         style={{
           backgroundImage: `url(${film?.posterUrl})`,
         }}
       ></div>
-      <div className="movie-body">
+      <div className="movie-page-body">
         {loading && <div className="loader">Загрузка...</div>}
-        <div className="movie-trailer-box">
-          <div className="movie-poster-box">
+        <div className="movie-page-trailer-box">
+          <div className="movie-page-poster-box">
             <img
-              className="movie-poster"
+              className="movie-page-poster"
               src={film?.posterUrl}
               alt={film?.nameRu}
+              loading="lazy"
             />
           </div>
-
           <div className="video-container">
             <video
               className="video-player"
@@ -78,8 +78,8 @@ export const MoviePage = () => {
             </div>
           </div>
         </div>
-        <div className="movie-details-box">
-          <div className="movie-details">
+        <div className="movie-page-details-box">
+          <div className="movie-page-details">
             <div>{film?.nameRu}</div>
             <div>Рейтинг Кинопоиска: {film?.ratingKinopoisk}</div>
             <div>Рейтинг IMDb: {film?.ratingImdb}</div>
@@ -88,9 +88,11 @@ export const MoviePage = () => {
             <div>Жанр: {film?.genres[0].genre}</div>
             <div>Продолжительность: {film?.filmLength} мин.</div>
           </div>
-          <div className="movie-description">
-            <div className="movie-description-title">О фильме</div>
-            <div className="movie-description-text">{film?.description}</div>
+          <div className="movie-page-description">
+            <div className="movie-page-description-title">О фильме</div>
+            <div className="movie-page-description-text">
+              {film?.description}
+            </div>
           </div>
         </div>
       </div>

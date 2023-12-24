@@ -29,14 +29,12 @@ export function Home() {
   }, []);
 
   return (
-    <div>
       <Suspense fallback={<LazyLoading />}>
         <div className="home">
-          <MoviesList movies={hitMovies} loading={loading} />
-          <MoviesList movies={newMovies} loading={loading} />
-          <MoviesList movies={recMovies} loading={loading} />
+          <MoviesList movies={hitMovies} loading={loading} title="Высокий рейтинг"/>
+          <MoviesList movies={recMovies} loading={loading} title="Новые фильмы"/>
+          <MoviesList movies={newMovies} loading={loading} title="Рекомендуемые фильмы"/>
         </div>
       </Suspense>
-    </div>
   );
 }

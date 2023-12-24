@@ -10,7 +10,11 @@ export function Serial({ movie }: MovieProps) {
       <div className="serial-box">
         <div className="serial-poster">
           <a href={`/serial/${movie.kinopoiskId}`}>
-            <img src={movie.posterUrlPreview} alt={movie.nameRu} />
+            <img
+              src={movie.posterUrlPreview}
+              alt={movie.nameRu}
+              loading="lazy"
+            />
           </a>
         </div>
         <div className="serial-details">

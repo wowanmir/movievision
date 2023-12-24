@@ -10,7 +10,11 @@ export function Movie({ movie }: MovieProps) {
       <div className="movie-box">
         <div className="movie-poster">
           <a href={`/movie/${movie.kinopoiskId}`}>
-            <img src={movie.posterUrlPreview} alt={movie.nameRu} />
+            <img
+              src={movie.posterUrlPreview}
+              alt={movie.nameRu}
+              loading="lazy"
+            />
           </a>
         </div>
         <div className="movie-details">

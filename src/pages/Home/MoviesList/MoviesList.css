@@ -1,6 +1,5 @@
 .main-slider {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   padding: 15px;
   margin: 0 15px;
@@ -8,14 +7,16 @@
   border: 5px solid rgb(0, 0, 0, 0.2);
   border-radius: 50px;
   box-shadow: 0 20px 20px rgb(0, 0, 0, 0.2);
-  overflow-x: auto;
 }
 
 .movies-slider {
+  display: flex;
   justify-content: space-between;
   min-width: 1440px;
-  display: flex;
   margin: 5px;
+  gap: 25px;
+  overflow: auto;
+  overflow-y: hidden;
 }
 
 .title-slider {
@@ -23,7 +24,6 @@
   font-weight: bold;
   text-align: left;
   padding: 8px 30px 1px;
-  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
