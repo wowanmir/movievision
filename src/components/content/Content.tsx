@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import "./Content.css";
+import "./content.css";
 
 interface IContent {
   children: JSX.Element;
