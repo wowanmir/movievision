@@ -111,3 +111,4 @@ export const AnimationsService = {
     return response;
   },
 };
+

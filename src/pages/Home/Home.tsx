@@ -1,6 +1,5 @@
 import { Suspense, useEffect, useState } from "react";
 import { TMovieResponseData } from "../../data/data";
-import LazyLoading from "../../components/LazyLoading";
 import {
   HitMoviesService,
   NewMoviesService,
@@ -29,7 +28,7 @@ export function Home() {
   }, []);
 
   return (
-      <Suspense fallback={<LazyLoading />}>
+      <Suspense>
         <div className="home">
           <MoviesList movies={hitMovies} loading={loading} title="Высокий рейтинг"/>
           <MoviesList movies={recMovies} loading={loading} title="Новые фильмы"/>

@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import {
   HomeIcon,
   LineIcon,
-  SearchIcon,
   WatchListIcon,
   MenuIcon,
   AvatarIcon,
@@ -14,6 +13,7 @@ import {
 } from "../icons";
 import "../content/";
 import "./Sidebar.css";
+import { Search } from "../search";
 
 const setActive = ({ isActive }: any) =>
   isActive ? "text-name-active" : "text-name";
@@ -78,10 +78,7 @@ export const Sidebar = () => {
             </p>
           </div>
           <LineIcon />
-          <div className="search-panel">
-            <SearchIcon size={20} />
-            <input className="search" type="text" placeholder="Поиск..." />
-          </div>
+          <Search />
         </div>
       </div>
     </>
